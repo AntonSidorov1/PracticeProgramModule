@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="OOO_Rythm.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ConnectionString" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Data Source=;Initial Catalog=MusicShop;Integrated Security=False;Persist Security Info=False;User ID=;Password=</Value>
+    </Setting>
+    <Setting Name="LocalServer" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

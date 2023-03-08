@@ -1,0 +1,74 @@
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+F:\УП ПМ01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.TextInput.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csprojAssemblyReference.cache
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.TextInput.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+E:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.DataForm.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csprojAssemblyReference.cache
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.TextInput.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.DataForm.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+C:\Users\stud\Downloads\Разработка программных модулей\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditUsers.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.TextInput.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.DataForm.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditUsers.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+D:\Users\Anton\Downloads\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣-20230307T151149Z-001\╨а╨░╨╖╤А╨░╨▒╨╛╤В╨║╨░ ╨┐╤А╨╛╨│╤А╨░╨╝╨╝╨╜╤Л╤Е ╨╝╨╛╨┤╤Г╨╗╨╡╨╣\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditUsers.resources
+F:\UP-PM01\Разработка программных модулей\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.TextInput.resources
