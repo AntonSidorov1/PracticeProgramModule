@@ -51,10 +51,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\categoryCollection.cs" />
+    <Compile Include="Classes\CategoryCollection.cs" />
     <Compile Include="Classes\CategoryFilter.cs" />
     <Compile Include="Classes\CategoryFilterCollection.cs" />
-    <Compile Include="Classes\ConnectionDataBase.cs" />
+    <Compile Include="Classes\DataBaseClasses\ConnectionDataBase.cs" />
     <Compile Include="Classes\DataBaseClasses\DataBaseQuery.cs" />
     <Compile Include="Classes\DataBaseClasses\QueryParameters.cs" />
     <Compile Include="Classes\DataBaseClasses\SortParameter.cs" />
@@ -65,7 +65,9 @@
     <Compile Include="Classes\DataBaseClasses\TableDataBaseRowsCollection.cs" />
     <Compile Include="Classes\DatabaseConnectionRythm.cs" />
     <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductCategory.cs" />
+    <Compile Include="Classes\ProductsCollection.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UsersCollection.cs" />
     <Compile Include="Controls\TextInput.cs">
@@ -116,6 +118,12 @@
     <Compile Include="View\EditUsers.Designer.cs">
       <DependentUpon>EditUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\EditUsers.resx">
       <DependentUpon>EditUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>

@@ -31,7 +31,7 @@ namespace OOO_Rythm
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.notifyIconApp = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelTitle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -47,12 +47,6 @@ namespace OOO_Rythm
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridViewProduct = new System.Windows.Forms.DataGridView();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnArticul = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnPhoto = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ColumnInfo = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnOrder = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonEditUser = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
@@ -64,6 +58,21 @@ namespace OOO_Rythm
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxCategoryFilters = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnArticul = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnPhoto = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ColumnInfo = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.listBoxCategory = new System.Windows.Forms.ListBox();
+            this.labelCategory = new System.Windows.Forms.Label();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.comboBoxSortCost = new System.Windows.Forms.ComboBox();
+            this.comboBoxSortName = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textInputName = new OOO_Rythm.TextInput();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
@@ -78,6 +87,7 @@ namespace OOO_Rythm
             this.panel3.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconApp
@@ -94,7 +104,7 @@ namespace OOO_Rythm
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1114, 90);
+            this.panelTitle.Size = new System.Drawing.Size(1213, 90);
             this.panelTitle.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -113,7 +123,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1110, 86);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1209, 86);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pictureBoxLogotip
@@ -138,7 +148,7 @@ namespace OOO_Rythm
             this.labelTitle.Location = new System.Drawing.Point(94, 8);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(8);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(642, 70);
+            this.labelTitle.Size = new System.Drawing.Size(705, 70);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "Ассортимент";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -146,10 +156,10 @@ namespace OOO_Rythm
             // buttonExit
             // 
             this.buttonExit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonExit.Location = new System.Drawing.Point(759, 15);
+            this.buttonExit.Location = new System.Drawing.Point(822, 15);
             this.buttonExit.Margin = new System.Windows.Forms.Padding(15);
             this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(336, 56);
+            this.buttonExit.Size = new System.Drawing.Size(372, 56);
             this.buttonExit.TabIndex = 2;
             this.buttonExit.Text = "Назад";
             this.buttonExit.UseVisualStyleBackColor = true;
@@ -159,10 +169,11 @@ namespace OOO_Rythm
             // 
             this.panelVault.BackColor = System.Drawing.Color.Red;
             this.panelVault.Controls.Add(this.statusStrip1);
+            this.panelVault.Controls.Add(this.label3);
             this.panelVault.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelVault.Location = new System.Drawing.Point(0, 586);
             this.panelVault.Name = "panelVault";
-            this.panelVault.Size = new System.Drawing.Size(1114, 79);
+            this.panelVault.Size = new System.Drawing.Size(1213, 79);
             this.panelVault.TabIndex = 1;
             // 
             // statusStrip1
@@ -174,7 +185,7 @@ namespace OOO_Rythm
             this.toolStripStatusLabelTime});
             this.statusStrip1.Location = new System.Drawing.Point(0, 56);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1114, 23);
+            this.statusStrip1.Size = new System.Drawing.Size(1213, 23);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -210,7 +221,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1114, 496);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1213, 496);
             this.tableLayoutPanel2.TabIndex = 2;
             // 
             // panel2
@@ -218,10 +229,10 @@ namespace OOO_Rythm
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.tableLayoutPanel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(298, 25);
+            this.panel2.Location = new System.Drawing.Point(323, 25);
             this.panel2.Margin = new System.Windows.Forms.Padding(25);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(791, 446);
+            this.panel2.Size = new System.Drawing.Size(865, 446);
             this.panel2.TabIndex = 1;
             // 
             // tableLayoutPanel4
@@ -234,6 +245,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.Controls.Add(this.buttonEditUser, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.dataGridViewProduct, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.groupBox1, 1, 2);
+            this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(25);
@@ -243,7 +255,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.22276F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.77724F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(787, 442);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(861, 442);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // dataGridViewProduct
@@ -259,16 +271,157 @@ namespace OOO_Rythm
             this.ColumnArticul,
             this.ColumnPhoto,
             this.ColumnInfo,
-            this.ColumnOrder,
             this.ColumnDescription});
             this.dataGridViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(188, 78);
+            this.dataGridViewProduct.Location = new System.Drawing.Point(204, 78);
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.RowHeadersVisible = false;
             this.dataGridViewProduct.RowHeadersWidth = 51;
             this.dataGridViewProduct.RowTemplate.Height = 24;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(575, 340);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(632, 340);
             this.dataGridViewProduct.TabIndex = 0;
+            // 
+            // buttonEditUser
+            // 
+            this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditUser.Location = new System.Drawing.Point(23, 11);
+            this.buttonEditUser.Name = "buttonEditUser";
+            this.buttonEditUser.Size = new System.Drawing.Size(175, 61);
+            this.buttonEditUser.TabIndex = 1;
+            this.buttonEditUser.Text = "Редактировать пользователей";
+            this.buttonEditUser.UseVisualStyleBackColor = true;
+            this.buttonEditUser.Visible = false;
+            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.tableLayoutPanel3);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(20, 20);
+            this.panel1.Margin = new System.Windows.Forms.Padding(20);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(258, 456);
+            this.panel1.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Controls.Add(this.labelRole, 1, 3);
+            this.tableLayoutPanel3.Controls.Add(this.listBoxRole, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.buttonDatas, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.labelFIO, 1, 4);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 6;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.32964F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.77562F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(254, 452);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // labelRole
+            // 
+            this.labelRole.AutoSize = true;
+            this.labelRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelRole.Location = new System.Drawing.Point(40, 299);
+            this.labelRole.Margin = new System.Windows.Forms.Padding(20);
+            this.labelRole.Name = "labelRole";
+            this.labelRole.Size = new System.Drawing.Size(174, 37);
+            this.labelRole.TabIndex = 0;
+            this.labelRole.Text = "label1";
+            this.labelRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // listBoxRole
+            // 
+            this.listBoxRole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxRole.FormattingEnabled = true;
+            this.listBoxRole.ItemHeight = 17;
+            this.listBoxRole.Location = new System.Drawing.Point(35, 85);
+            this.listBoxRole.Margin = new System.Windows.Forms.Padding(15);
+            this.listBoxRole.Name = "listBoxRole";
+            this.listBoxRole.Size = new System.Drawing.Size(184, 179);
+            this.listBoxRole.TabIndex = 1;
+            this.listBoxRole.SelectedIndexChanged += new System.EventHandler(this.listBoxRole_SelectedIndexChanged);
+            // 
+            // buttonDatas
+            // 
+            this.buttonDatas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDatas.Location = new System.Drawing.Point(35, 20);
+            this.buttonDatas.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
+            this.buttonDatas.Name = "buttonDatas";
+            this.buttonDatas.Size = new System.Drawing.Size(184, 50);
+            this.buttonDatas.TabIndex = 2;
+            this.buttonDatas.Text = "Данные пользователя";
+            this.buttonDatas.UseVisualStyleBackColor = true;
+            this.buttonDatas.Click += new System.EventHandler(this.buttonDatas_Click);
+            // 
+            // labelFIO
+            // 
+            this.labelFIO.AutoSize = true;
+            this.labelFIO.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelFIO.Location = new System.Drawing.Point(23, 356);
+            this.labelFIO.Name = "labelFIO";
+            this.labelFIO.Size = new System.Drawing.Size(208, 75);
+            this.labelFIO.TabIndex = 3;
+            this.labelFIO.Text = "label1";
+            this.labelFIO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.tableLayoutPanel5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 20);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(169, 317);
+            this.panel3.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.comboBoxCategoryFilters, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.listBoxCategory, 0, 1);
+            this.tableLayoutPanel5.Controls.Add(this.labelCategory, 0, 2);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 3;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 95F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(165, 313);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // comboBoxCategoryFilters
+            // 
+            this.comboBoxCategoryFilters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxCategoryFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategoryFilters.FormattingEnabled = true;
+            this.comboBoxCategoryFilters.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxCategoryFilters.Name = "comboBoxCategoryFilters";
+            this.comboBoxCategoryFilters.Size = new System.Drawing.Size(159, 25);
+            this.comboBoxCategoryFilters.TabIndex = 0;
+            this.comboBoxCategoryFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategoryFilters_SelectedIndexChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(23, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(175, 340);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Категории";
             // 
             // ColumnID
             // 
@@ -313,169 +466,161 @@ namespace OOO_Rythm
             this.ColumnInfo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.ColumnInfo.Width = 50;
             // 
-            // ColumnOrder
-            // 
-            this.ColumnOrder.Frozen = true;
-            this.ColumnOrder.HeaderText = "В заказ";
-            this.ColumnOrder.MinimumWidth = 6;
-            this.ColumnOrder.Name = "ColumnOrder";
-            this.ColumnOrder.ReadOnly = true;
-            this.ColumnOrder.Width = 50;
-            // 
             // ColumnDescription
             // 
             this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnDescription.HeaderText = "Описание";
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
             this.ColumnDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // buttonEditUser
+            // listBoxCategory
             // 
-            this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditUser.Location = new System.Drawing.Point(23, 11);
-            this.buttonEditUser.Name = "buttonEditUser";
-            this.buttonEditUser.Size = new System.Drawing.Size(159, 61);
-            this.buttonEditUser.TabIndex = 1;
-            this.buttonEditUser.Text = "Редактировать пользователей";
-            this.buttonEditUser.UseVisualStyleBackColor = true;
-            this.buttonEditUser.Visible = false;
-            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
+            this.listBoxCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxCategory.FormattingEnabled = true;
+            this.listBoxCategory.ItemHeight = 17;
+            this.listBoxCategory.Location = new System.Drawing.Point(3, 53);
+            this.listBoxCategory.Name = "listBoxCategory";
+            this.listBoxCategory.Size = new System.Drawing.Size(159, 162);
+            this.listBoxCategory.TabIndex = 1;
+            this.listBoxCategory.SelectedIndexChanged += new System.EventHandler(this.listBoxCategory_SelectedIndexChanged);
             // 
-            // panel1
+            // labelCategory
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.tableLayoutPanel3);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(20, 20);
-            this.panel1.Margin = new System.Windows.Forms.Padding(20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 456);
-            this.panel1.TabIndex = 0;
+            this.labelCategory.AutoSize = true;
+            this.labelCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCategory.Location = new System.Drawing.Point(3, 218);
+            this.labelCategory.Name = "labelCategory";
+            this.labelCategory.Size = new System.Drawing.Size(159, 95);
+            this.labelCategory.TabIndex = 2;
+            this.labelCategory.Text = "label1";
+            this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tableLayoutPanel3
+            // tableLayoutPanel6
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Controls.Add(this.labelRole, 1, 3);
-            this.tableLayoutPanel3.Controls.Add(this.listBoxRole, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.buttonDatas, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.labelFIO, 1, 4);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 6;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.32964F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.77562F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(229, 452);
-            this.tableLayoutPanel3.TabIndex = 0;
+            this.tableLayoutPanel6.ColumnCount = 4;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 57F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.43478F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.04348F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 36.69565F));
+            this.tableLayoutPanel6.Controls.Add(this.labelCount, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.comboBoxSortCost, 2, 1);
+            this.tableLayoutPanel6.Controls.Add(this.comboBoxSortName, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.textInputName, 3, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(204, 11);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 2;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(632, 61);
+            this.tableLayoutPanel6.TabIndex = 4;
             // 
-            // labelRole
+            // labelCount
             // 
-            this.labelRole.AutoSize = true;
-            this.labelRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRole.Location = new System.Drawing.Point(40, 299);
-            this.labelRole.Margin = new System.Windows.Forms.Padding(20);
-            this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(149, 37);
-            this.labelRole.TabIndex = 0;
-            this.labelRole.Text = "label1";
-            this.labelRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCount.AutoSize = true;
+            this.labelCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelCount.Location = new System.Drawing.Point(3, 0);
+            this.labelCount.Name = "labelCount";
+            this.tableLayoutPanel6.SetRowSpan(this.labelCount, 2);
+            this.labelCount.Size = new System.Drawing.Size(51, 61);
+            this.labelCount.TabIndex = 0;
+            this.labelCount.Text = "0 из 0";
+            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // listBoxRole
+            // label1
             // 
-            this.listBoxRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxRole.FormattingEnabled = true;
-            this.listBoxRole.ItemHeight = 17;
-            this.listBoxRole.Location = new System.Drawing.Point(35, 85);
-            this.listBoxRole.Margin = new System.Windows.Forms.Padding(15);
-            this.listBoxRole.Name = "listBoxRole";
-            this.listBoxRole.Size = new System.Drawing.Size(159, 179);
-            this.listBoxRole.TabIndex = 1;
-            this.listBoxRole.SelectedIndexChanged += new System.EventHandler(this.listBoxRole_SelectedIndexChanged);
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label1.Location = new System.Drawing.Point(60, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(168, 30);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Название";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonDatas
+            // comboBoxSortCost
             // 
-            this.buttonDatas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDatas.Location = new System.Drawing.Point(35, 20);
-            this.buttonDatas.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
-            this.buttonDatas.Name = "buttonDatas";
-            this.buttonDatas.Size = new System.Drawing.Size(159, 50);
-            this.buttonDatas.TabIndex = 2;
-            this.buttonDatas.Text = "Данные пользователя";
-            this.buttonDatas.UseVisualStyleBackColor = true;
-            this.buttonDatas.Click += new System.EventHandler(this.buttonDatas_Click);
+            this.comboBoxSortCost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxSortCost.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSortCost.FormattingEnabled = true;
+            this.comboBoxSortCost.Items.AddRange(new object[] {
+            "Не сортировать",
+            "По возростанию",
+            "По убыванию"});
+            this.comboBoxSortCost.Location = new System.Drawing.Point(234, 33);
+            this.comboBoxSortCost.Name = "comboBoxSortCost";
+            this.comboBoxSortCost.Size = new System.Drawing.Size(183, 25);
+            this.comboBoxSortCost.TabIndex = 2;
+            this.comboBoxSortCost.SelectedIndexChanged += new System.EventHandler(this.comboBoxSortName_SelectedIndexChanged);
             // 
-            // labelFIO
+            // comboBoxSortName
             // 
-            this.labelFIO.AutoSize = true;
-            this.labelFIO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFIO.Location = new System.Drawing.Point(23, 356);
-            this.labelFIO.Name = "labelFIO";
-            this.labelFIO.Size = new System.Drawing.Size(183, 75);
-            this.labelFIO.TabIndex = 3;
-            this.labelFIO.Text = "label1";
-            this.labelFIO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.comboBoxSortName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxSortName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSortName.FormattingEnabled = true;
+            this.comboBoxSortName.Items.AddRange(new object[] {
+            "Не сортировать",
+            "По возростанию",
+            "По убыванию"});
+            this.comboBoxSortName.Location = new System.Drawing.Point(60, 33);
+            this.comboBoxSortName.Name = "comboBoxSortName";
+            this.comboBoxSortName.Size = new System.Drawing.Size(168, 25);
+            this.comboBoxSortName.TabIndex = 2;
+            this.comboBoxSortName.SelectedIndexChanged += new System.EventHandler(this.comboBoxSortName_SelectedIndexChanged);
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tableLayoutPanel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 20);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(153, 317);
-            this.panel3.TabIndex = 2;
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Location = new System.Drawing.Point(234, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(183, 30);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Цена без скидки";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel5
+            // label3
             // 
-            this.tableLayoutPanel5.ColumnCount = 1;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Controls.Add(this.comboBoxCategoryFilters, 0, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 2;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(149, 313);
-            this.tableLayoutPanel5.TabIndex = 0;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(890, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 17);
+            this.label3.TabIndex = 4;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // comboBoxCategoryFilters
+            // textInputName
             // 
-            this.comboBoxCategoryFilters.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxCategoryFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCategoryFilters.FormattingEnabled = true;
-            this.comboBoxCategoryFilters.Location = new System.Drawing.Point(3, 3);
-            this.comboBoxCategoryFilters.Name = "comboBoxCategoryFilters";
-            this.comboBoxCategoryFilters.Size = new System.Drawing.Size(143, 25);
-            this.comboBoxCategoryFilters.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.panel3);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(23, 78);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(159, 340);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Категории";
+            this.textInputName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textInputName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textInputName.InputText = "";
+            this.textInputName.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textInputName.Location = new System.Drawing.Point(424, 3);
+            this.textInputName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textInputName.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textInputName.MultiLine = false;
+            this.textInputName.Name = "textInputName";
+            this.textInputName.PasswordChar = '\0';
+            this.textInputName.ReadOnly = false;
+            this.tableLayoutPanel6.SetRowSpan(this.textInputName, 2);
+            this.textInputName.Size = new System.Drawing.Size(204, 55);
+            this.textInputName.TabIndex = 4;
+            this.textInputName.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textInputName.Title = "Поиск по названию";
+            this.textInputName.UseSystemPasswordChar = false;
+            this.textInputName.Value = "";
             // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1114, 665);
+            this.ClientSize = new System.Drawing.Size(1213, 665);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panelVault);
             this.Controls.Add(this.panelTitle);
@@ -502,7 +647,10 @@ namespace OOO_Rythm
             this.tableLayoutPanel3.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -528,12 +676,6 @@ namespace OOO_Rythm
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.DataGridView dataGridViewProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArticul;
-        private System.Windows.Forms.DataGridViewImageColumn ColumnPhoto;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnInfo;
-        private System.Windows.Forms.DataGridViewButtonColumn ColumnOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
         private System.Windows.Forms.Button buttonDatas;
         private System.Windows.Forms.Label labelFIO;
         private System.Windows.Forms.Button buttonEditUser;
@@ -541,6 +683,21 @@ namespace OOO_Rythm
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.ComboBox comboBoxCategoryFilters;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnArticul;
+        private System.Windows.Forms.DataGridViewImageColumn ColumnPhoto;
+        private System.Windows.Forms.DataGridViewButtonColumn ColumnInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDescription;
+        private System.Windows.Forms.ListBox listBoxCategory;
+        private System.Windows.Forms.Label labelCategory;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox comboBoxSortCost;
+        private System.Windows.Forms.ComboBox comboBoxSortName;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private TextInput textInputName;
     }
 }
 

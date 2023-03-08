@@ -179,6 +179,7 @@ namespace OOO_Rythm
             {
 
                 MessageBox.Show($"Не удалось подключиться к базе данных", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.Close();
                 return;
             }
         }
@@ -193,6 +194,7 @@ namespace OOO_Rythm
 
         private void buttonInput_Click(object sender, EventArgs e)
         {
+            
             GetLogotip();
 
             try

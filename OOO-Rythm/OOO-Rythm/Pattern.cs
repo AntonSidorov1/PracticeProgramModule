@@ -47,5 +47,19 @@ namespace OOO_Rythm
             toolStripStatusLabelDate.Text = date;
             toolStripStatusLabelTime.Text = time;
         }
+
+        private void labelTitle_Click(object sender, EventArgs e)
+        {
+
+            Text = labelTitle.Text;
+
+            string tire = "–";
+            string text = Text == "" ? "" : tire;
+            string title = Text;
+            Text += $" {text} ООО \"Ритм\" {tire} {Application.ProductName} {tire} {Application.ProductVersion}";
+
+            notifyIconApp.Text = Text;
+            notifyIconApp.BalloonTipText = title;
+        }
     }
 }

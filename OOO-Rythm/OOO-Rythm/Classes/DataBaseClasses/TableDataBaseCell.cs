@@ -29,23 +29,79 @@ namespace OOO_Rythm
             
         }
 
-        public TableDataBaseCell(string name, object valueCell) : this(name)
+        public TableDataBaseCell(string name, object valueCell, Comparison comparison = Comparison.Equals) : this(name)
         {
             Value = valueCell;
+            Comparison = comparison;
         }
 
-        public TableDataBaseCell(TableDataBaseCell cell) : this(cell.Name, cell.Value)
+        public TableDataBaseCell(TableDataBaseCell cell) : this(cell.Name, cell.Value, cell.Comparison)
         {
 
+        }
+
+        Comparison comparison = Comparison.Equals;
+
+        public Comparison Comparison
+        {
+            get => comparison;
+            set => comparison = value;
         }
 
 
         public string ParamName => $"@{Name}";
         public string ParamName1 => $"@{Name1}";
 
-        public string Condition => Name + " = " + ParamName;
 
-        public string Condition1 => Name + " = " + ParamName1;
+        public string ComparisonText()
+        {
+            if (Comparison == Comparison.Equals)
+                return " = ";
+            if (Comparison == Comparison.NoEquals)
+                return " <> ";
+            if(Comparison == Comparison.More)
+                return " > ";
+            if (Comparison == Comparison.Less)
+                return " < ";
+            if (Comparison == Comparison.MoreOrEqual)
+                return " >= ";
+            if (Comparison == Comparison.LessOrEqual)
+                return " <= ";
+            if (Comparison == Comparison.Like)
+                return " Like ";
+            if (Comparison == Comparison.NotLike)
+                return " Not Like ";
+            if (Comparison == Comparison.Is)
+            {
+                return " is ";
+            }
+            return "";
+
+        }
+
+        public string Condition
+        {
+            get
+            {
+                if(Comparison == Comparison.Like || Comparison == Comparison.NotLike)
+                {
+                    return Name + ComparisonText() + "'%'+" + ParamName + "+'%'";
+                }
+                return Name + ComparisonText() + ParamName;
+            }
+        }
+
+        public string Condition1
+        {
+            get
+            {
+                if (Comparison == Comparison.Like || Comparison == Comparison.NotLike)
+                {
+                    return Name + ComparisonText() + "'%'+" + ParamName1 + "+'%'";
+                }
+                return Name + ComparisonText() + ParamName1;
+            }
+        }
 
 
         string name = "";
@@ -291,6 +347,22 @@ namespace OOO_Rythm
         /// <summary>
         /// Like
         /// </summary>
-        Like
+        Like,
+        /// <summary>
+        /// Not Like
+        /// </summary>
+        NotLike,
+        /// <summary>
+        /// is
+        /// </summary>
+        Is,
+        /// <summary>
+        /// Is null
+        /// </summary>
+        IsNull,
+        /// <summary>
+        /// Is Not Null
+        /// </summary>
+        IsNotNull
     }
 }

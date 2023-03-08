@@ -31,55 +31,87 @@ namespace OOO_Rythm
 
         List<Role> roles = new List<Role>();
 
+        CategoryFilterCollection filters;
         private void Pattern_Load(object sender, EventArgs e)
         {
 
+            try
+            {
+                filters = CategoryFilterCollection.Default;
+                for (int i = 0; i < filters.Count; i++)
+                {
+                    comboBoxCategoryFilters.Items.Add(filters[i].Name);
+                }
+                comboBoxCategoryFilters.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
 
-            CategoryFilterCollection filters = CategoryFilterCollection.Default;
+            }
+            textInputName.InputText_Changed += comboBoxSortName_SelectedIndexChanged;
 
+            comboBoxSortName.SelectedIndex = 0;
+            comboBoxSortCost.SelectedIndex = 0;
 
-
-            outputAssortiment();
+            //outputAssortiment();
             UpdateFIO();
         }
+
+        ProductsCollection products;
+        CategoryCollection categories;
 
         void outputAssortiment()
         {
             DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
             query.Table = "Product";
-            TableDataBaseGrid table = query.GetCells();
 
-            for(int i = 0; i < table.Rows.Count; i++)
+            int index = listBoxCategory.SelectedIndex;
+            int indexCategory = categories[index].ID;
+
+            products = ProductsCollection.DefaultFromDB(indexCategory,
+                textInputName.Text, 
+                (Sort)comboBoxSortName.SelectedIndex, 
+                (Sort)comboBoxSortCost.SelectedIndex);
+            ProductsCollection products1 = ProductsCollection.DefaultRemote;
+
+            dataGridViewProduct.Rows.Clear();
+
+            labelCount.Text = products.Count + " из " + products1.Count;
+
+            for(int i = 0; i < products.Count; i++)
             {
                 int rowID = dataGridViewProduct.Rows.Add();
                 DataGridViewRow row = dataGridViewProduct.Rows[rowID];
-                row.Height = 150;
-                row.Cells[0].Value = table.Rows[i]["ProductID"];
-                row.Cells[1].Value = table.Rows[i]["ProductArticle"];
 
+                Product product = products[i];
+                row.Height = 150;
+                row.Cells[0].Value = product.ID;
+                row.Cells[1].Value = product.Articul;
                 
                 try
                 {
-                    row.Cells[2].Value = table.Rows[i].GetCell("ProductPhoto").ImageValue;
+                    row.Cells[2].Value = product.Photo;
                 }
                 catch
                 {
                     row.Cells[2].Value = new Bitmap(Helper.Logotip, 50, 50);
                 }
 
-                double cost = Convert.ToDouble(table.Rows[i].GetCell("ProductCost").DecimalValue);
-                int discount = Convert.ToInt32(table.Rows[i].GetCell("ProductDiscount").ByteValue);
-                double costWithDiscount = cost - (cost * discount / 100);
+                double cost = product.CostWithoutDiscount;
+                double discount = product.DiscountPersent;
+                int discount1 = product.Discount;
+                double costWithDiscount = product.CostWithDiscount;
 
                 row.Cells[3].Value = "!";
-                row.Cells[4].Value = "+";
 
-                row.Cells[5].Value = "Название - " + table.Rows[i].GetCell("ProductName").TextValue + Environment.NewLine;
-                row.Cells[5].Value += "Цена - " + cost.ToString("c2") + Environment.NewLine;
-                row.Cells[5].Value += "Скидка - " + (discount/100.0).ToString("0 %") + Environment.NewLine;
-                row.Cells[5].Value += "Цена со скидеой - " + costWithDiscount.ToString("c2") + Environment.NewLine;
 
-                if(discount >= 15)
+                string description = "";
+                description = "Название - " + product.Name + Environment.NewLine;
+                description += "Цена - " + cost.ToString("c2") + Environment.NewLine;
+                description += "Скидка - " + discount.ToString("0 %") + Environment.NewLine;
+                description += "Цена со скидеой - " + costWithDiscount.ToString("c2") + Environment.NewLine;
+
+                if(discount1 >= 15)
                 {
                     row.DefaultCellStyle.BackColor = Color.Pink;
                 }
@@ -87,6 +119,7 @@ namespace OOO_Rythm
                 {
                     row.DefaultCellStyle.BackColor = Color.White;
                 }
+                row.Cells[4].Value = description;
 
             }
         }
@@ -228,6 +261,47 @@ namespace OOO_Rythm
             editUsers.ShowDialog();
             Show();
             UpdateFIO();
+        }
+
+        private void comboBoxCategoryFilters_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = (sender as ComboBox).SelectedIndex;
+            filterOutput(filters[index].ID);
+        }
+
+
+        void filterOutput(int index = 0)
+        {
+            try
+            {
+                listBoxCategory.Items.Clear();
+                categories = CategoryCollection.DefaultFromDB(index);
+                for (int i = 0; i < categories.Count; i++)
+                {
+                    listBoxCategory.Items.Add(categories[i].Name);
+                }
+                listBoxCategory.SelectedIndex = 0;
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void listBoxCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            labelCategory.Text = categories[(sender as ListBox).SelectedIndex].Name;
+            outputAssortiment();
+        }
+
+        private void comboBoxSortName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            outputAssortiment();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

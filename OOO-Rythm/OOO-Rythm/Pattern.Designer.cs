@@ -111,6 +111,7 @@ namespace OOO_Rythm
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "ООО \"Ритм\"";
             this.labelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelTitle.Click += new System.EventHandler(this.labelTitle_Click);
             // 
             // buttonExit
             // 

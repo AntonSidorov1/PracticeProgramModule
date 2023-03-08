@@ -13,18 +13,28 @@ namespace OOO_Rythm
     {
         public TableDataBaseRow()
         {
+            AddCellsForThisDatas();
+
+        }
+
+        protected virtual void AddCellsForThisDatas()
+        {
+
         }
 
         public TableDataBaseRow(int capacity) : base(capacity)
         {
+            AddCellsForThisDatas();
         }
 
         public TableDataBaseRow(IEnumerable<TableDataBaseCell> collection) : base(collection)
         {
+            AddCellsForThisDatas();
         }
 
-        public TableDataBaseRow (TableDataBaseRow row): this()
+        public TableDataBaseRow (TableDataBaseRow row, bool add = false): this()
         {
+            if(add)
             for(int i = 0; i < row.Count; i++)
             {
                 Add(row[i]);

@@ -41,6 +41,7 @@ namespace OOO_Rythm
 
         void AddCells()
         {
+            
             Add("CategoryID");
             Add("CategoryName");
             Add("Subcategorie");
@@ -80,7 +81,7 @@ namespace OOO_Rythm
             set => GetCell("CategoryFilterID").Int32Value = value;
         }
 
-        CategoryFilterCollection filters = CategoryFilterCollection.Default;
+        CategoryFilterCollection filters;
 
         public CategoryFilterCollection Filters
         {
@@ -98,7 +99,7 @@ namespace OOO_Rythm
             }
         }
 
-        CategoryCollection categories = CategoryCollection.Default;
+        CategoryCollection categories;
 
         public CategoryCollection Categories
         {

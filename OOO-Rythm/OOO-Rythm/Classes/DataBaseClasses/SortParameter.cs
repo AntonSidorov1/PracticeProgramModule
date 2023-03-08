@@ -22,6 +22,7 @@ namespace OOO_Rythm
 
         public SortParameter(string column, Sort sort) : this(column)
         {
+            Sort = sort;
         }
 
         string column = "";

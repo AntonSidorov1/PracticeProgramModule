@@ -44,18 +44,41 @@ namespace OOO_Rythm
             }
         }
 
+        public static CategoryCollection DefaultFromDB(int filterID = 0)
+        {
+            CategoryCollection categories = new CategoryCollection();
+            categories.FromDB(filterID);
+            return categories;
+        }
 
-        public void FromDB()
+
+        public void FromDB(int filterID = 0)
         {
             Clear();
 
             DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
-            query.Table = "CategoryFilter";
+            query.Table = "ProductCategory";
+
+            if(filterID > 0)
+            {
+                query.Conditions.Add(new TableDataBaseRow(
+                    new TableDataBaseCell[]
+                    {
+                        new TableDataBaseCell("CategoryFilterID", filterID)
+                    })) ;
+            }
+
             TableDataBaseGrid table = query.GetCells();
-            Add(new ProductCategory(0, "Все категории"));
+            ProductCategory category = new ProductCategory(0, "Все категории");
+            category.Categories = this;
+            category.Filters = CategoryFilterCollection.Default;
+            Add(category);
             for (int i = 0; i < table.Count; i++)
             {
-                Add(new ProductCategory(table[i]));
+                category = new ProductCategory(table[i]);
+                category.Categories = this;
+                category.Filters = CategoryFilterCollection.Default;
+                Add(category);
             }
         }
 
