@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace OOO_Rythm
 {
-    static class Helper
+    public static class Helper
     {
         static Roles roles = new Roles();
         static public Roles Roles => roles;
@@ -67,9 +67,9 @@ namespace OOO_Rythm
 
         static TableDataBaseRow userDatas;
 
-        public static void UserInput(string login, string password)
+        public static void UserInput(string login, string password, bool systemConnection = true)
         {
-            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            DataBaseQuery query = systemConnection? new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection()) : new DataBaseQuery(new DatabaseConnectionRythm(Connection.ConnectionString));
             query.Table = "User";
             query.Conditions.Add(
                 new TableDataBaseRow(

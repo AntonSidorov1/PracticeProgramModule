@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOO_Rythm
 {
-    class User : TableDataBaseRow
+    public class User : TableDataBaseRow
     {
         public User()
         {

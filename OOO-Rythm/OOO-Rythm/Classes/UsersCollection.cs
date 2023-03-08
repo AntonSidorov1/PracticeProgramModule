@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOO_Rythm
 {
-    class UsersCollection : List<User>
+    public class UsersCollection : List<User>
     {
         public UsersCollection()
         {

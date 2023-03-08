@@ -344,11 +344,13 @@ namespace OOO_Rythm
             this.textBoxLogin.MultiLine = false;
             this.textBoxLogin.Name = "textBoxLogin";
             this.textBoxLogin.PasswordChar = '\0';
+            this.textBoxLogin.ReadOnly = false;
             this.textBoxLogin.Size = new System.Drawing.Size(221, 71);
             this.textBoxLogin.TabIndex = 9;
             this.textBoxLogin.TextScrollBar = System.Windows.Forms.ScrollBars.None;
             this.textBoxLogin.Title = "Логин";
             this.textBoxLogin.UseSystemPasswordChar = false;
+            this.textBoxLogin.Value = "";
             // 
             // textBoxPassword
             // 
@@ -362,11 +364,13 @@ namespace OOO_Rythm
             this.textBoxPassword.MultiLine = false;
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.PasswordChar = '●';
+            this.textBoxPassword.ReadOnly = false;
             this.textBoxPassword.Size = new System.Drawing.Size(221, 71);
             this.textBoxPassword.TabIndex = 10;
             this.textBoxPassword.TextScrollBar = System.Windows.Forms.ScrollBars.None;
             this.textBoxPassword.Title = "Пароль";
             this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.Value = "";
             // 
             // checkBoxShowPassword
             // 

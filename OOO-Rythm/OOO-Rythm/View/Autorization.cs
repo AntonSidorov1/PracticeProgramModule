@@ -16,9 +16,12 @@ namespace OOO_Rythm
 {
     public partial class Autorization : Form
     {
-        public Autorization()
+        public Autorization(bool withIcon = true)
         {
             InitializeComponent();
+
+            if (!withIcon)
+                return;
 
             Text = labelTitle.Text;
 
@@ -184,15 +187,44 @@ namespace OOO_Rythm
             }
         }
 
-        void runToAssortiment()
+        void runToAssortiment(bool modile = true)
         {
             ProductForm productForm = new ProductForm();
             Hide();
-            productForm.ShowDialog();
+            if (modile)
+                productForm.ShowDialog();
+            else
+                productForm.Show();
             Show();
         }
 
+        /// <summary>
+        /// Логин пользователя
+        /// </summary>
+        public string Login
+        {
+            get => textBoxLogin.Text;
+            set => textBoxLogin.Text = value;
+        }
+
+        /// <summary>
+        /// Пароль пользователя
+        /// </summary>
+        public string Password
+        {
+            get => textBoxPassword.Text;
+            set => textBoxPassword.Text = value;
+        }
+
         private void buttonInput_Click(object sender, EventArgs e)
+        {
+            LogIn(true);
+        }
+
+        /// <summary>
+        /// Вход пользователя в систему
+        /// </summary>
+        public void LogIn(bool modile = false, bool systemConnection = true)
         {
             
             GetLogotip();
@@ -211,13 +243,14 @@ namespace OOO_Rythm
 
             try
             {
-                Helper.UserInput(textBoxLogin.Text, textBoxPassword.Text);
+                Helper.UserInput(Login, Password, systemConnection);
                 string messageText = $"Авторизация прошла успешно \n";
                 if(Helper.HaveUserFIO())
                 {
                     messageText += $"ФИО пользователя: {Helper.UserFIO}";
                 }    
 
+                if(modile)
                 MessageBox.Show(messageText, "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
@@ -235,7 +268,7 @@ namespace OOO_Rythm
             }
 
             SaveUserDatas();
-            runToAssortiment();
+            runToAssortiment(modile);
         }
 
         private void buttonRegistration_Click(object sender, EventArgs e)
@@ -245,8 +278,8 @@ namespace OOO_Rythm
 
             try
             {
-                string login = textBoxLogin.Text;
-                string password = textBoxPassword.Text;
+                string login = Login;
+                string password = Password;
                 if (Helper.NullText(login))
                 {
                     MessageBox.Show($"Логин не может быть пустым", "Регистрация" +
