@@ -39,7 +39,7 @@ namespace OOO_Rythm
             DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
             query.Table = "CategoryFilter";
             TableDataBaseGrid table = query.GetCells();
-            Add(new CategoryFilter(0, "Без фильтра"));
+            Add(new CategoryFilter(0, "Без фильтров"));
             for (int i = 0; i < table.Count; i++)
             {
                 Add(new CategoryFilter(table[i]));

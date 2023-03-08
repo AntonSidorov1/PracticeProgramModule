@@ -31,7 +31,7 @@ namespace OOO_Rythm
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.notifyIconApp = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelTitle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,13 +53,17 @@ namespace OOO_Rythm
             this.ColumnInfo = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnOrder = new System.Windows.Forms.DataGridViewButtonColumn();
             this.ColumnDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonEditUser = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.labelRole = new System.Windows.Forms.Label();
             this.listBoxRole = new System.Windows.Forms.ListBox();
             this.buttonDatas = new System.Windows.Forms.Button();
             this.labelFIO = new System.Windows.Forms.Label();
-            this.buttonEditUser = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.comboBoxCategoryFilters = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
@@ -71,6 +75,9 @@ namespace OOO_Rythm
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewProduct)).BeginInit();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconApp
@@ -224,8 +231,9 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.11796F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.88203F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 21F));
-            this.tableLayoutPanel4.Controls.Add(this.dataGridViewProduct, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.buttonEditUser, 1, 1);
+            this.tableLayoutPanel4.Controls.Add(this.dataGridViewProduct, 2, 2);
+            this.tableLayoutPanel4.Controls.Add(this.groupBox1, 1, 2);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(25);
@@ -317,12 +325,24 @@ namespace OOO_Rythm
             // ColumnDescription
             // 
             this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnDescription.HeaderText = "Описание";
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
             this.ColumnDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // buttonEditUser
+            // 
+            this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEditUser.Location = new System.Drawing.Point(23, 11);
+            this.buttonEditUser.Name = "buttonEditUser";
+            this.buttonEditUser.Size = new System.Drawing.Size(159, 61);
+            this.buttonEditUser.TabIndex = 1;
+            this.buttonEditUser.Text = "Редактировать пользователей";
+            this.buttonEditUser.UseVisualStyleBackColor = true;
+            this.buttonEditUser.Visible = false;
+            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
             // 
             // panel1
             // 
@@ -405,17 +425,50 @@ namespace OOO_Rythm
             this.labelFIO.Text = "label1";
             this.labelFIO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // buttonEditUser
+            // panel3
             // 
-            this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEditUser.Location = new System.Drawing.Point(23, 11);
-            this.buttonEditUser.Name = "buttonEditUser";
-            this.buttonEditUser.Size = new System.Drawing.Size(159, 61);
-            this.buttonEditUser.TabIndex = 1;
-            this.buttonEditUser.Text = "Редактировать пользователей";
-            this.buttonEditUser.UseVisualStyleBackColor = true;
-            this.buttonEditUser.Visible = false;
-            this.buttonEditUser.Click += new System.EventHandler(this.buttonEditUser_Click);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel3.Controls.Add(this.tableLayoutPanel5);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(3, 20);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(153, 317);
+            this.panel3.TabIndex = 2;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Controls.Add(this.comboBoxCategoryFilters, 0, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 2;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(149, 313);
+            this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // comboBoxCategoryFilters
+            // 
+            this.comboBoxCategoryFilters.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxCategoryFilters.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxCategoryFilters.FormattingEnabled = true;
+            this.comboBoxCategoryFilters.Location = new System.Drawing.Point(3, 3);
+            this.comboBoxCategoryFilters.Name = "comboBoxCategoryFilters";
+            this.comboBoxCategoryFilters.Size = new System.Drawing.Size(143, 25);
+            this.comboBoxCategoryFilters.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel3);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(23, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(159, 340);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Категории";
             // 
             // ProductForm
             // 
@@ -447,6 +500,9 @@ namespace OOO_Rythm
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -481,6 +537,10 @@ namespace OOO_Rythm
         private System.Windows.Forms.Button buttonDatas;
         private System.Windows.Forms.Label labelFIO;
         private System.Windows.Forms.Button buttonEditUser;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.ComboBox comboBoxCategoryFilters;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

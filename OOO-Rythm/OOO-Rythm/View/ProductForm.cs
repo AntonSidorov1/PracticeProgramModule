@@ -33,7 +33,12 @@ namespace OOO_Rythm
 
         private void Pattern_Load(object sender, EventArgs e)
         {
-            
+
+
+            CategoryFilterCollection filters = CategoryFilterCollection.Default;
+
+
+
             outputAssortiment();
             UpdateFIO();
         }
