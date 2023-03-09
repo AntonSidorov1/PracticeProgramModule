@@ -239,7 +239,7 @@ namespace OOO_Rythm
             {
                 try
                 {
-                    return UserFIO.Split(' ')[3];
+                    return UserFIO.Split(' ')[2];
                 }
                 catch
                 {

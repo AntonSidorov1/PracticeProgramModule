@@ -31,10 +31,44 @@ namespace OOO_Rythm
 
         List<Role> roles = new List<Role>();
 
+        int[,] discounts = new int[,]
+        {
+            {0, 100 },
+            {0, 9 },
+            {10, 14 },
+            {15, 24 },
+            {25, 49 },
+            {50, 100 },
+            {0, 25 },
+            {0, 50 }
+
+        };
+
+        public new void Show()
+        {
+            try
+            {
+                base.Show();
+            }
+            catch
+            {
+
+            }
+        }
+
+
         CategoryFilterCollection filters;
         private void Pattern_Load(object sender, EventArgs e)
         {
-
+            for(int i =0; i < discounts.GetLength(0); i++)
+            {
+                int start = discounts[i, 0];
+                int end = discounts[i, 1];
+                string diapozon = string.Join("..", start, end);
+                comboBoxDiscounts.Items.Add(diapozon);
+            }
+            comboBoxDiscounts.SelectedIndex = 0;
+            comboBoxDiscounts.SelectedIndexChanged += comboBoxSortName_SelectedIndexChanged;
             try
             {
                 filters = CategoryFilterCollection.Default;
@@ -72,6 +106,10 @@ namespace OOO_Rythm
                 textInputName.Text, 
                 (Sort)comboBoxSortName.SelectedIndex, 
                 (Sort)comboBoxSortCost.SelectedIndex);
+
+            int indexDiscount = comboBoxDiscounts.SelectedIndex;
+
+            products = products.GetProductsForDiscountDiapozon(discounts[indexDiscount, 0], discounts[indexDiscount, 1]);
             ProductsCollection products1 = ProductsCollection.DefaultRemote;
 
             dataGridViewProduct.Rows.Clear();
@@ -302,6 +340,11 @@ namespace OOO_Rythm
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void notifyIconApp_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            //Show();
         }
     }
 }

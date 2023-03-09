@@ -56,6 +56,23 @@ namespace OOO_Rythm
             this.textBoxPassword = new OOO_Rythm.TextInput();
             this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
             this.checkBoxSave = new System.Windows.Forms.CheckBox();
+            this.contextMenuStripForm = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.логинToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.парольToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBoxLogin = new System.Windows.Forms.ToolStripTextBox();
+            this.LoginToForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBoxPassword = new System.Windows.Forms.ToolStripTextBox();
+            this.PasswordToForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.войтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.LoginFromForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.PasswordFromForm = new System.Windows.Forms.ToolStripMenuItem();
+            this.войтиГостемToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AutorizationButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.RegistrationButton = new System.Windows.Forms.ToolStripMenuItem();
+            this.действияСОкномToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonWindowShow = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonWindowHide = new System.Windows.Forms.ToolStripMenuItem();
+            this.выйтиИзПриложенияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
@@ -66,13 +83,18 @@ namespace OOO_Rythm
             this.panel1.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrganizationLogotip)).BeginInit();
+            this.contextMenuStripForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconApp
             // 
+            this.notifyIconApp.ContextMenuStrip = this.contextMenuStripForm;
             this.notifyIconApp.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconApp.Icon")));
             this.notifyIconApp.Text = "notifyIcon1";
             this.notifyIconApp.Visible = true;
+            this.notifyIconApp.Click += new System.EventHandler(this.notifyIconApp_Click);
+            this.notifyIconApp.DoubleClick += new System.EventHandler(this.notifyIconApp_DoubleClick);
+            this.notifyIconApp.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notifyIconApp_MouseClick);
             // 
             // panelTitle
             // 
@@ -396,6 +418,137 @@ namespace OOO_Rythm
             this.checkBoxSave.Text = "Запомнить учётные данные";
             this.checkBoxSave.UseVisualStyleBackColor = true;
             // 
+            // contextMenuStripForm
+            // 
+            this.contextMenuStripForm.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.contextMenuStripForm.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStripForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.логинToolStripMenuItem,
+            this.парольToolStripMenuItem,
+            this.войтиToolStripMenuItem,
+            this.действияСОкномToolStripMenuItem});
+            this.contextMenuStripForm.Name = "contextMenuStripForm";
+            this.contextMenuStripForm.Size = new System.Drawing.Size(237, 120);
+            // 
+            // логинToolStripMenuItem
+            // 
+            this.логинToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBoxLogin,
+            this.LoginToForm,
+            this.LoginFromForm});
+            this.логинToolStripMenuItem.Name = "логинToolStripMenuItem";
+            this.логинToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.логинToolStripMenuItem.Text = "Логин";
+            // 
+            // парольToolStripMenuItem
+            // 
+            this.парольToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBoxPassword,
+            this.PasswordToForm,
+            this.PasswordFromForm});
+            this.парольToolStripMenuItem.Name = "парольToolStripMenuItem";
+            this.парольToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.парольToolStripMenuItem.Text = "Пароль";
+            // 
+            // toolStripTextBoxLogin
+            // 
+            this.toolStripTextBoxLogin.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripTextBoxLogin.Name = "toolStripTextBoxLogin";
+            this.toolStripTextBoxLogin.Size = new System.Drawing.Size(200, 24);
+            // 
+            // LoginToForm
+            // 
+            this.LoginToForm.Name = "LoginToForm";
+            this.LoginToForm.Size = new System.Drawing.Size(274, 26);
+            this.LoginToForm.Text = "Ввести в окно";
+            this.LoginToForm.Click += new System.EventHandler(this.LoginToForm_Click);
+            // 
+            // toolStripTextBoxPassword
+            // 
+            this.toolStripTextBoxPassword.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.toolStripTextBoxPassword.Name = "toolStripTextBoxPassword";
+            this.toolStripTextBoxPassword.Size = new System.Drawing.Size(200, 24);
+            // 
+            // PasswordToForm
+            // 
+            this.PasswordToForm.Name = "PasswordToForm";
+            this.PasswordToForm.Size = new System.Drawing.Size(274, 26);
+            this.PasswordToForm.Text = "Ввести в окно";
+            this.PasswordToForm.Click += new System.EventHandler(this.PasswordToForm_Click);
+            // 
+            // войтиToolStripMenuItem
+            // 
+            this.войтиToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.войтиГостемToolStripMenuItem,
+            this.AutorizationButton,
+            this.RegistrationButton});
+            this.войтиToolStripMenuItem.Name = "войтиToolStripMenuItem";
+            this.войтиToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.войтиToolStripMenuItem.Text = "Войти";
+            // 
+            // LoginFromForm
+            // 
+            this.LoginFromForm.Name = "LoginFromForm";
+            this.LoginFromForm.Size = new System.Drawing.Size(274, 26);
+            this.LoginFromForm.Text = "Вывести из окна";
+            this.LoginFromForm.Click += new System.EventHandler(this.LoginFromForm_Click);
+            // 
+            // PasswordFromForm
+            // 
+            this.PasswordFromForm.Name = "PasswordFromForm";
+            this.PasswordFromForm.Size = new System.Drawing.Size(274, 26);
+            this.PasswordFromForm.Text = "Вывести из окна";
+            this.PasswordFromForm.Click += new System.EventHandler(this.PasswordFromForm_Click);
+            // 
+            // войтиГостемToolStripMenuItem
+            // 
+            this.войтиГостемToolStripMenuItem.Name = "войтиГостемToolStripMenuItem";
+            this.войтиГостемToolStripMenuItem.Size = new System.Drawing.Size(270, 26);
+            this.войтиГостемToolStripMenuItem.Text = "Войти гостем";
+            this.войтиГостемToolStripMenuItem.Click += new System.EventHandler(this.buttonGoest_Click);
+            // 
+            // AutorizationButton
+            // 
+            this.AutorizationButton.Name = "AutorizationButton";
+            this.AutorizationButton.Size = new System.Drawing.Size(270, 26);
+            this.AutorizationButton.Text = "Авторизироваться";
+            this.AutorizationButton.Click += new System.EventHandler(this.AutorizationButton_Click);
+            // 
+            // RegistrationButton
+            // 
+            this.RegistrationButton.Name = "RegistrationButton";
+            this.RegistrationButton.Size = new System.Drawing.Size(270, 26);
+            this.RegistrationButton.Text = "Зарегистрироваться";
+            this.RegistrationButton.Click += new System.EventHandler(this.RegistrationButton_Click);
+            // 
+            // действияСОкномToolStripMenuItem
+            // 
+            this.действияСОкномToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.buttonWindowShow,
+            this.buttonWindowHide,
+            this.выйтиИзПриложенияToolStripMenuItem});
+            this.действияСОкномToolStripMenuItem.Name = "действияСОкномToolStripMenuItem";
+            this.действияСОкномToolStripMenuItem.Size = new System.Drawing.Size(236, 22);
+            this.действияСОкномToolStripMenuItem.Text = "Действия с окном";
+            // 
+            // buttonWindowShow
+            // 
+            this.buttonWindowShow.Name = "buttonWindowShow";
+            this.buttonWindowShow.Size = new System.Drawing.Size(280, 26);
+            this.buttonWindowShow.Text = "Отобразить";
+            // 
+            // buttonWindowHide
+            // 
+            this.buttonWindowHide.Name = "buttonWindowHide";
+            this.buttonWindowHide.Size = new System.Drawing.Size(280, 26);
+            this.buttonWindowHide.Text = "Скрыть";
+            // 
+            // выйтиИзПриложенияToolStripMenuItem
+            // 
+            this.выйтиИзПриложенияToolStripMenuItem.Name = "выйтиИзПриложенияToolStripMenuItem";
+            this.выйтиИзПриложенияToolStripMenuItem.Size = new System.Drawing.Size(280, 26);
+            this.выйтиИзПриложенияToolStripMenuItem.Text = "Выйти из приложения";
+            // 
             // Autorization
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
@@ -429,6 +582,7 @@ namespace OOO_Rythm
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxOrganizationLogotip)).EndInit();
+            this.contextMenuStripForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -460,6 +614,23 @@ namespace OOO_Rythm
         private System.Windows.Forms.CheckBox checkBoxSave;
         private TextInput textBoxLogin;
         private TextInput textBoxPassword;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStripForm;
+        private System.Windows.Forms.ToolStripMenuItem логинToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxLogin;
+        private System.Windows.Forms.ToolStripMenuItem LoginToForm;
+        private System.Windows.Forms.ToolStripMenuItem LoginFromForm;
+        private System.Windows.Forms.ToolStripMenuItem парольToolStripMenuItem;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxPassword;
+        private System.Windows.Forms.ToolStripMenuItem PasswordToForm;
+        private System.Windows.Forms.ToolStripMenuItem PasswordFromForm;
+        private System.Windows.Forms.ToolStripMenuItem войтиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem войтиГостемToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem AutorizationButton;
+        private System.Windows.Forms.ToolStripMenuItem RegistrationButton;
+        private System.Windows.Forms.ToolStripMenuItem действияСОкномToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem buttonWindowShow;
+        private System.Windows.Forms.ToolStripMenuItem buttonWindowHide;
+        private System.Windows.Forms.ToolStripMenuItem выйтиИзПриложенияToolStripMenuItem;
     }
 }
 

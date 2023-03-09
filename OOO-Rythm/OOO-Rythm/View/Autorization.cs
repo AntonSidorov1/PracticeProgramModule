@@ -127,14 +127,7 @@ namespace OOO_Rythm
 
         private void CheckBoxSave_CheckedChanged(object sender, EventArgs e)
         {
-            UserDatas userDatas = UserDatas.Default;
-            userDatas.SaveDatas = (sender as CheckBox).Checked;
-            //if(!(sender as CheckBox).Checked)
-            //{
-            //    userDatas.Login = "";
-            //    userDatas.Password = "";
-            //}
-            userDatas.Save();
+
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
@@ -189,13 +182,28 @@ namespace OOO_Rythm
 
         void runToAssortiment(bool modile = true)
         {
+            try
+            {
+                Application.OpenForms["ProductForm"].Close();
+            }
+            catch
+            {
+
+            }
             ProductForm productForm = new ProductForm();
             Hide();
             if (modile)
                 productForm.ShowDialog();
             else
                 productForm.Show();
-            Show();
+            try
+            {
+                Show();
+            }
+            catch
+            {
+
+            }
         }
 
         /// <summary>
@@ -336,6 +344,80 @@ namespace OOO_Rythm
         {
             Properties.Settings.Default.Save();
             UserDatas.Default.Save();
+        }
+
+        private void notifyIconApp_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void notifyIconApp_DoubleClick(object sender, EventArgs e)
+        {
+            Show();
+        }
+
+        private void notifyIconApp_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button == MouseButtons.Right)
+            {
+
+            }
+        }
+
+        private void LoginToForm_Click(object sender, EventArgs e)
+        {
+            Login = toolStripTextBoxLogin.Text;
+        }
+
+        private void LoginFromForm_Click(object sender, EventArgs e)
+        {
+            toolStripTextBoxLogin.Text = Login;
+        }
+
+        private void PasswordToForm_Click(object sender, EventArgs e)
+        {
+            Password = toolStripTextBoxPassword.Text;
+        }
+
+        private void PasswordFromForm_Click(object sender, EventArgs e)
+        {
+            toolStripTextBoxPassword.Text = Password;
+        }
+
+        private void AutorizationButton_Click(object sender, EventArgs e)
+        {
+            LoginToForm_Click(sender, e);
+            PasswordToForm_Click(sender, e);
+            buttonInput_Click(sender, e);
+        }
+
+        private void RegistrationButton_Click(object sender, EventArgs e)
+        {
+            LoginToForm_Click(sender, e);
+            PasswordToForm_Click(sender, e);
+            buttonRegistration_Click(sender, e);
+        }
+
+        private void buttonWindowHide_Click(object sender, EventArgs e)
+        {
+            Hide();
+        }
+
+        private void buttonWindowShow_Click(object sender, EventArgs e)
+        {
+            Show();
+        }
+
+        public new void Show()
+        {
+            try
+            {
+                base.Show();
+            }
+            catch
+            {
+
+            }
         }
     }
 }

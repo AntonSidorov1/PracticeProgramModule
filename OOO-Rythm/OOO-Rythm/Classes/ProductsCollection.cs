@@ -99,6 +99,11 @@ namespace OOO_Rythm
 
         public Product GetProduct(int idProduct) => this[IndexOf(idProduct)];
 
+        public ProductsCollection GetProductsForDiscountDiapozon(int startDiscount, int endDiscount)
+        {
+            List<Product> products = FindAll(p => p.Discount >= startDiscount && p.Discount <= endDiscount);
+            return new ProductsCollection(products);
+        }
 
     }
 }
