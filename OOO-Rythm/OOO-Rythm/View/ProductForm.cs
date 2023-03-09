@@ -357,7 +357,20 @@ namespace OOO_Rythm
         {
             if (e.ColumnIndex != 3)
                 return;
-            int index = e.RowIndex;
+            dataGridViewProduct_CellContentDoubleClick(sender, e);
+
         }
+
+        private void dataGridViewProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            Product product = products[index];
+            EditProduct editProduct = new EditProduct(role, product);
+            Hide();
+            editProduct.ShowDialog();
+            Show();
+        }
+
+        
     }
 }

@@ -31,7 +31,7 @@ namespace OOO_Rythm
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.notifyIconApp = new System.Windows.Forms.NotifyIcon(this.components);
             this.panelTitle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -258,7 +258,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.11796F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.88203F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 31F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32F));
             this.tableLayoutPanel4.Controls.Add(this.buttonEditUser, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.dataGridViewProduct, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 1);
@@ -280,7 +280,7 @@ namespace OOO_Rythm
             this.buttonEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonEditUser.Location = new System.Drawing.Point(23, 11);
             this.buttonEditUser.Name = "buttonEditUser";
-            this.buttonEditUser.Size = new System.Drawing.Size(173, 61);
+            this.buttonEditUser.Size = new System.Drawing.Size(172, 61);
             this.buttonEditUser.TabIndex = 1;
             this.buttonEditUser.Text = "Редактировать пользователей";
             this.buttonEditUser.UseVisualStyleBackColor = true;
@@ -302,7 +302,7 @@ namespace OOO_Rythm
             this.ColumnInfo,
             this.ColumnDescription});
             this.dataGridViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridViewProduct.Location = new System.Drawing.Point(202, 78);
+            this.dataGridViewProduct.Location = new System.Drawing.Point(201, 78);
             this.dataGridViewProduct.Name = "dataGridViewProduct";
             this.dataGridViewProduct.RowHeadersVisible = false;
             this.dataGridViewProduct.RowHeadersWidth = 51;
@@ -310,6 +310,7 @@ namespace OOO_Rythm
             this.dataGridViewProduct.Size = new System.Drawing.Size(624, 340);
             this.dataGridViewProduct.TabIndex = 0;
             this.dataGridViewProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellContentClick);
+            this.dataGridViewProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellContentDoubleClick);
             // 
             // ColumnID
             // 
@@ -357,8 +358,8 @@ namespace OOO_Rythm
             // ColumnDescription
             // 
             this.ColumnDescription.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnDescription.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnDescription.HeaderText = "Описание";
             this.ColumnDescription.MinimumWidth = 6;
             this.ColumnDescription.Name = "ColumnDescription";
@@ -378,7 +379,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel6.Controls.Add(this.label2, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.textInputName, 3, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(202, 11);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(201, 11);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -479,7 +480,7 @@ namespace OOO_Rythm
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(23, 78);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(173, 340);
+            this.panel4.Size = new System.Drawing.Size(172, 340);
             this.panel4.TabIndex = 5;
             // 
             // tableLayoutPanel7
@@ -495,7 +496,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel7.RowCount = 2;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 61F));
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(169, 336);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(168, 336);
             this.tableLayoutPanel7.TabIndex = 0;
             // 
             // groupBox1
@@ -504,7 +505,7 @@ namespace OOO_Rythm
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 64);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(163, 269);
+            this.groupBox1.Size = new System.Drawing.Size(162, 269);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Категории";
@@ -516,7 +517,7 @@ namespace OOO_Rythm
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 17);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(157, 249);
+            this.panel3.Size = new System.Drawing.Size(156, 249);
             this.panel3.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -533,7 +534,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 70F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(153, 245);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(152, 245);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // comboBoxCategoryFilters
@@ -543,7 +544,7 @@ namespace OOO_Rythm
             this.comboBoxCategoryFilters.FormattingEnabled = true;
             this.comboBoxCategoryFilters.Location = new System.Drawing.Point(3, 3);
             this.comboBoxCategoryFilters.Name = "comboBoxCategoryFilters";
-            this.comboBoxCategoryFilters.Size = new System.Drawing.Size(147, 22);
+            this.comboBoxCategoryFilters.Size = new System.Drawing.Size(146, 22);
             this.comboBoxCategoryFilters.TabIndex = 0;
             this.comboBoxCategoryFilters.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategoryFilters_SelectedIndexChanged);
             // 
@@ -554,7 +555,7 @@ namespace OOO_Rythm
             this.listBoxCategory.ItemHeight = 14;
             this.listBoxCategory.Location = new System.Drawing.Point(3, 53);
             this.listBoxCategory.Name = "listBoxCategory";
-            this.listBoxCategory.Size = new System.Drawing.Size(147, 119);
+            this.listBoxCategory.Size = new System.Drawing.Size(146, 119);
             this.listBoxCategory.TabIndex = 1;
             this.listBoxCategory.SelectedIndexChanged += new System.EventHandler(this.listBoxCategory_SelectedIndexChanged);
             // 
@@ -564,7 +565,7 @@ namespace OOO_Rythm
             this.labelCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelCategory.Location = new System.Drawing.Point(3, 175);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(147, 70);
+            this.labelCategory.Size = new System.Drawing.Size(146, 70);
             this.labelCategory.TabIndex = 2;
             this.labelCategory.Text = "label1";
             this.labelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -575,7 +576,7 @@ namespace OOO_Rythm
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(163, 55);
+            this.groupBox2.Size = new System.Drawing.Size(162, 55);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Скидка";
@@ -587,7 +588,7 @@ namespace OOO_Rythm
             this.comboBoxDiscounts.FormattingEnabled = true;
             this.comboBoxDiscounts.Location = new System.Drawing.Point(3, 17);
             this.comboBoxDiscounts.Name = "comboBoxDiscounts";
-            this.comboBoxDiscounts.Size = new System.Drawing.Size(157, 22);
+            this.comboBoxDiscounts.Size = new System.Drawing.Size(156, 22);
             this.comboBoxDiscounts.TabIndex = 0;
             // 
             // panel1

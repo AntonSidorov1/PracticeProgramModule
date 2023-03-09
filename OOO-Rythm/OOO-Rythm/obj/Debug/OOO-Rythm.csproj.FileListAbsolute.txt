@@ -93,7 +93,6 @@ C:\Users\stud\Downloads\Разработка программных модуле
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
-C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.TextInput.resources
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
@@ -107,3 +106,4 @@ C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csprojAssemblyReference.cache
