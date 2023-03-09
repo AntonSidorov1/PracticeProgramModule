@@ -31,10 +31,7 @@ namespace OOO_Rythm.Settings {
                 return ((string)(this["Login"]));
             }
             set {
-                if (SaveDatas)
-                    this["Login"] = value;
-                else
-                    this["Login"] = "";
+                this["Login"] = value;
             }
         }
         
@@ -46,10 +43,7 @@ namespace OOO_Rythm.Settings {
                 return ((string)(this["Password"]));
             }
             set {
-                if (SaveDatas)
-                    this["Password"] = value;
-                else
-                    this["Password"] = "";
+                this["Password"] = value;
             }
         }
         
@@ -61,14 +55,7 @@ namespace OOO_Rythm.Settings {
                 return ((bool)(this["SaveDatas"]));
             }
             set {
-                bool save = value;
-                this["SaveDatas"] = save;
-                if(!save)
-                {
-                    Login = "";
-                    Password = "";
-                }
-                Save();
+                this["SaveDatas"] = value;
             }
         }
     }

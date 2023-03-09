@@ -12,6 +12,8 @@ namespace OOO_Rythm
 {
     public partial class EditProduct : Form
     {
+        int role = 0;
+
         public EditProduct()
         {
             InitializeComponent();
