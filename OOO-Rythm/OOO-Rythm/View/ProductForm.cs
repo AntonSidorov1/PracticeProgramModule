@@ -177,6 +177,7 @@ namespace OOO_Rythm
             toolStripStatusLabelTime.Text = time;
         }
 
+        Role role;
         private void listBoxRole_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -184,7 +185,8 @@ namespace OOO_Rythm
                 int roleID = (sender as ListBox).SelectedIndex;
                 labelRole.Text = roles[roleID].Name;
 
-                roleID = roles[roleID].ID;
+                role = roles[roleID];
+                roleID = role.ID;
                 if(roleID == 2 || roleID == 3)
                 {
                     buttonEditUser.Visible = true;
@@ -236,6 +238,8 @@ namespace OOO_Rythm
                         listBoxRole.Visible = false;
                         buttonDatas.Visible = false;
                         labelRole.Text = "Гость";
+                        Helper.GetRoles();
+                        role = Helper.Roles.Goest;
                     }
                 }
                 else
@@ -244,6 +248,8 @@ namespace OOO_Rythm
                     listBoxRole.Visible = false;
                     buttonDatas.Visible = false;
                     labelRole.Text = "Гость";
+                    Helper.GetRoles();
+                    role = Helper.Roles.Goest;
                 }
             }
             catch
@@ -345,6 +351,13 @@ namespace OOO_Rythm
         private void notifyIconApp_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             //Show();
+        }
+
+        private void dataGridViewProduct_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex != 3)
+                return;
+            int index = e.RowIndex;
         }
     }
 }

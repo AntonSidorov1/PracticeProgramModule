@@ -41,6 +41,11 @@ namespace OOO_Rythm
             Name = name;
         }
 
+        public Role(int id, string name = "") : this(name)
+        {
+            ID = id;
+        }
+
         public static bool operator ==(Role role1, Role role2)
         {
             return role1.Name == role2.Name;

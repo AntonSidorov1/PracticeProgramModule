@@ -12,12 +12,13 @@ namespace OOO_Rythm
 {
     public partial class EditProduct : Form
     {
-        int role = 0;
+        
 
         public EditProduct()
         {
             InitializeComponent();
 
+            labelTitle.Text = "Просмотр информации о товаре";
             Text = labelTitle.Text;
 
             string tire = "–";
@@ -28,7 +29,27 @@ namespace OOO_Rythm
             notifyIconApp.Text = Text;
             notifyIconApp.BalloonTipText = title;
 
+            labelTitle.TextChanged += labelTitle_Click;
+        }
+
+        public EditProduct(Role role) : this()
+        {
+            Role = role;
+
             
+        }
+
+        public EditProduct(Role role, Product product) : this(role)
+        {
+
+        }
+
+        Role role;
+
+        public Role Role
+        {
+            get => role;
+            set => role = value;
         }
 
         private void Pattern_Load(object sender, EventArgs e)

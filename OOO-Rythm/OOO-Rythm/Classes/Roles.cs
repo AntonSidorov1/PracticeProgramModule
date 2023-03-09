@@ -38,7 +38,7 @@ namespace OOO_Rythm
             }
         }
 
-        Role goest => new Role("Гость");
+        Role goest => new Role(0, "Гость");
 
         public Role Goest => goest;
 

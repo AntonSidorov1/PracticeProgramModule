@@ -90,3 +90,20 @@ C:\Users\stud\Downloads\Разработка программных модуле
 C:\Users\stud\Downloads\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
 C:\Users\stud\Downloads\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
 C:\Users\stud\Downloads\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.TextInput.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.DataForm.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditUsers.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditProduct.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
