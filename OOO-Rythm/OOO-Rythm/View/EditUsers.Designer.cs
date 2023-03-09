@@ -241,6 +241,8 @@ namespace OOO_Rythm
             this.textInputLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tableLayoutPanel3.SetColumnSpan(this.textInputLogin, 2);
             this.textInputLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textInputLogin.InputBackColor = System.Drawing.SystemColors.Window;
+            this.textInputLogin.InputForeColor = System.Drawing.SystemColors.WindowText;
             this.textInputLogin.InputText = "";
             this.textInputLogin.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.textInputLogin.Location = new System.Drawing.Point(10, 10);
@@ -248,6 +250,7 @@ namespace OOO_Rythm
             this.textInputLogin.MinimumSize = new System.Drawing.Size(100, 44);
             this.textInputLogin.MultiLine = false;
             this.textInputLogin.Name = "textInputLogin";
+            this.textInputLogin.NoReadOnly = true;
             this.textInputLogin.PasswordChar = '\0';
             this.textInputLogin.ReadOnly = false;
             this.textInputLogin.Size = new System.Drawing.Size(353, 54);
@@ -452,7 +455,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel6.Size = new System.Drawing.Size(373, 35);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
@@ -461,9 +464,9 @@ namespace OOO_Rythm
             this.checkBoxBlocked.AutoSize = true;
             this.checkBoxBlocked.Dock = System.Windows.Forms.DockStyle.Fill;
             this.checkBoxBlocked.Enabled = false;
-            this.checkBoxBlocked.Location = new System.Drawing.Point(132, 3);
+            this.checkBoxBlocked.Location = new System.Drawing.Point(133, 3);
             this.checkBoxBlocked.Name = "checkBoxBlocked";
-            this.checkBoxBlocked.Size = new System.Drawing.Size(238, 29);
+            this.checkBoxBlocked.Size = new System.Drawing.Size(237, 29);
             this.checkBoxBlocked.TabIndex = 0;
             this.checkBoxBlocked.Text = "Заблокирован";
             this.checkBoxBlocked.UseVisualStyleBackColor = true;
@@ -473,7 +476,7 @@ namespace OOO_Rythm
             this.buttonChangeBlocked.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonChangeBlocked.Location = new System.Drawing.Point(3, 3);
             this.buttonChangeBlocked.Name = "buttonChangeBlocked";
-            this.buttonChangeBlocked.Size = new System.Drawing.Size(123, 29);
+            this.buttonChangeBlocked.Size = new System.Drawing.Size(124, 29);
             this.buttonChangeBlocked.TabIndex = 1;
             this.buttonChangeBlocked.Text = "Сменить";
             this.buttonChangeBlocked.UseVisualStyleBackColor = true;

@@ -65,11 +65,25 @@
     <Compile Include="Classes\DataBaseClasses\TableDataBaseRowsCollection.cs" />
     <Compile Include="Classes\DatabaseConnectionRythm.cs" />
     <Compile Include="Classes\Helper.cs" />
+    <Compile Include="Classes\IndexNameRow.cs" />
+    <Compile Include="Classes\IndexNameRowsCollection.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductCategory.cs" />
     <Compile Include="Classes\ProductsCollection.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UsersCollection.cs" />
+    <Compile Include="Controls\ComboBoxWithName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\ComboBoxWithName.Designer.cs">
+      <DependentUpon>ComboBoxWithName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\NumericControlWithName.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\NumericControlWithName.Designer.cs">
+      <DependentUpon>NumericControlWithName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\TextInput.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -130,6 +144,12 @@
     <Compile Include="View\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Controls\ComboBoxWithName.resx">
+      <DependentUpon>ComboBoxWithName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\NumericControlWithName.resx">
+      <DependentUpon>NumericControlWithName.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controls\TextInput.resx">
       <DependentUpon>TextInput.cs</DependentUpon>
     </EmbeddedResource>

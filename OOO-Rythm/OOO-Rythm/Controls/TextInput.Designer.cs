@@ -30,16 +30,16 @@ namespace OOO_Rythm
         private void InitializeComponent()
         {
             this.groupBoxTitle = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanelPole = new System.Windows.Forms.TableLayoutPanel();
             this.textBoxInput = new System.Windows.Forms.TextBox();
             this.buttonClear = new System.Windows.Forms.Button();
             this.groupBoxTitle.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanelPole.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxTitle
             // 
-            this.groupBoxTitle.Controls.Add(this.tableLayoutPanel1);
+            this.groupBoxTitle.Controls.Add(this.tableLayoutPanelPole);
             this.groupBoxTitle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxTitle.Location = new System.Drawing.Point(0, 0);
             this.groupBoxTitle.Margin = new System.Windows.Forms.Padding(5);
@@ -50,30 +50,31 @@ namespace OOO_Rythm
             this.groupBoxTitle.Text = "groupBox1";
             this.groupBoxTitle.Enter += new System.EventHandler(this.groupBoxTitle_Enter);
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanelPole
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.textBoxInput, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.buttonClear, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(242, 54);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanelPole.ColumnCount = 2;
+            this.tableLayoutPanelPole.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelPole.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelPole.Controls.Add(this.textBoxInput, 0, 0);
+            this.tableLayoutPanelPole.Controls.Add(this.buttonClear, 1, 0);
+            this.tableLayoutPanelPole.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanelPole.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanelPole.Name = "tableLayoutPanelPole";
+            this.tableLayoutPanelPole.RowCount = 2;
+            this.tableLayoutPanelPole.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.tableLayoutPanelPole.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanelPole.Size = new System.Drawing.Size(242, 54);
+            this.tableLayoutPanelPole.TabIndex = 0;
             // 
             // textBoxInput
             // 
             this.textBoxInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxInput.Location = new System.Drawing.Point(3, 3);
             this.textBoxInput.Name = "textBoxInput";
-            this.tableLayoutPanel1.SetRowSpan(this.textBoxInput, 2);
+            this.tableLayoutPanelPole.SetRowSpan(this.textBoxInput, 2);
             this.textBoxInput.Size = new System.Drawing.Size(186, 22);
             this.textBoxInput.TabIndex = 0;
+            this.textBoxInput.ReadOnlyChanged += new System.EventHandler(this.textBoxInput_ReadOnlyChanged);
             this.textBoxInput.TextChanged += new System.EventHandler(this.textBoxInput_TextChanged);
             // 
             // buttonClear
@@ -86,6 +87,7 @@ namespace OOO_Rythm
             this.buttonClear.TabIndex = 1;
             this.buttonClear.Text = "C";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.VisibleChanged += new System.EventHandler(this.buttonClear_VisibleChanged);
             this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // TextInput
@@ -99,8 +101,8 @@ namespace OOO_Rythm
             this.Size = new System.Drawing.Size(248, 75);
             this.Load += new System.EventHandler(this.TextInput_Load);
             this.groupBoxTitle.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.tableLayoutPanelPole.ResumeLayout(false);
+            this.tableLayoutPanelPole.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -108,7 +110,7 @@ namespace OOO_Rythm
         #endregion
 
         private System.Windows.Forms.GroupBox groupBoxTitle;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanelPole;
         private System.Windows.Forms.TextBox textBoxInput;
         private System.Windows.Forms.Button buttonClear;
     }

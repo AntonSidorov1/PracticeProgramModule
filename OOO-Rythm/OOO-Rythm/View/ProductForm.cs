@@ -122,6 +122,7 @@ namespace OOO_Rythm
                 DataGridViewRow row = dataGridViewProduct.Rows[rowID];
 
                 Product product = products[i];
+                product.Products = products;
                 row.Height = 150;
                 row.Cells[0].Value = product.ID;
                 row.Cells[1].Value = product.Articul;
@@ -194,6 +195,15 @@ namespace OOO_Rythm
                 else
                 {
                     buttonEditUser.Visible = false;
+                }
+
+                if(roleID == 3 || roleID == 4)
+                {
+                    buttonAddProduct.Visible = true;
+                }
+                else
+                {
+                    buttonAddProduct.Visible = false;
                 }
             }
             catch
@@ -369,8 +379,19 @@ namespace OOO_Rythm
             Hide();
             editProduct.ShowDialog();
             Show();
+            outputAssortiment();
         }
 
-        
+        private void buttonAddProduct_Click(object sender, EventArgs e)
+        {
+
+            Product product = new Product();
+            product.Products = products;
+            EditProduct editProduct = new EditProduct(role, product);
+            Hide();
+            editProduct.ShowDialog();
+            Show();
+            outputAssortiment();
+        }
     }
 }

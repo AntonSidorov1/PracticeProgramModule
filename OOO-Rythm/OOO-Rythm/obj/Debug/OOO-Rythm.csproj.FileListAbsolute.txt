@@ -124,3 +124,22 @@ D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.TextInput.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Pattern.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Properties.Resources.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Autorization.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ConnectionForm.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.DataForm.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditUsers.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.EditProduct.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.ProductForm.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.GenerateResource.cache
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.ComboBoxWithName.resources
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache
+F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.NumericControlWithName.resources

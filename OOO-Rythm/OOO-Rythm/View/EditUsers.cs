@@ -258,7 +258,7 @@ namespace OOO_Rythm
             else
             {
                 title = "Разблокировка";
-                doing = "Разблкирова";
+                doing = "Разблкировка";
             }
 
             title += " пользователя";

@@ -48,6 +48,14 @@ namespace OOO_Rythm
             return this[Count - 1];
         }
 
+        public TableDataBaseCell Add()
+        {
+            TableDataBaseCell cell = new TableDataBaseCell();
+            cell.Name = "";
+            cell.Value = "";
+            Add(cell);
+            return cell;
+        }
 
         public TableDataBaseCell Add(string name, object valueCell)
         {

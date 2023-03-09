@@ -40,8 +40,51 @@ namespace OOO_Rythm
             Add("ProductPhoto");
             Add("ProductParameters");
 
+            ID = 0;
+            Articul = "";
+            Name = "";
+            Description = "";
+            Cost = 0;
+            Discount = 0;
         }
 
+        public TableDataBaseRow GetRowWithoutID()
+        {
+            TableDataBaseRow row = new TableDataBaseRow(this, true);
+            int index = row.FindIndex(p => p.Name == "ProductID");
+            row.RemoveAt(index);
+
+            try
+            {
+                if (Photo == null || Photo is null)
+                {
+                    throw new Exception();
+                }
+            }
+            catch
+            {
+                index = row.FindIndex(p => p.Name == "ProductPhoto");
+                row.RemoveAt(index);
+            }
+
+            return row;
+        }
+
+        public TableDataBaseRow GetRowWithoutIDAndArticul()
+        {
+            TableDataBaseRow row = GetRowWithoutID();
+            int index = row.FindIndex(p => p.Name == "ProductArticle");
+            row.RemoveAt(index);
+
+            return row;
+        }
+
+        ProductsCollection products;
+        public ProductsCollection Products
+        {
+            get => products;
+            set => products = value;
+        }
 
         public static Product Defualt = new Product();
 

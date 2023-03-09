@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing;
 
 namespace OOO_Rythm
 {
@@ -16,6 +17,7 @@ namespace OOO_Rythm
         {
             InitializeComponent();
             PasswordChar = '\0';
+            width = tableLayoutPanelPole.ColumnStyles[1].Width;
         }
 
         public static bool NullText(string text)
@@ -28,12 +30,24 @@ namespace OOO_Rythm
         private void TextInput_Load(object sender, EventArgs e)
         {
             textBoxInput.TextChanged += (s, ea) => InputText_Changed?.Invoke(this, ea);
+            
+        }
+
+        float width;
+
+        public ScrollBars ScrollBars
+        {
+            get => textBoxInput.ScrollBars;
+            set => textBoxInput.ScrollBars = value;
         }
 
         public bool ReadOnly
         {
             get => textBoxInput.ReadOnly;
-            set => textBoxInput.ReadOnly = value;
+            set
+            {
+                textBoxInput.ReadOnly = value;
+            }
         }
 
         public string Title
@@ -104,6 +118,46 @@ namespace OOO_Rythm
         private void groupBoxTitle_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonClear_VisibleChanged(object sender, EventArgs e)
+        {
+            bool visible = (sender as Button).Visible;
+            float width = this.width;
+            if (!visible)
+                width = 5;
+            tableLayoutPanelPole.ColumnStyles[1].Width = width;
+        }
+
+        private void textBoxInput_ReadOnlyChanged(object sender, EventArgs e)
+        {
+            buttonClear.Visible = NoReadOnly;
+        }
+
+        public bool NoReadOnly
+        {
+            get => !ReadOnly;
+            set => ReadOnly = !value;
+        }
+
+        public Color InputBackColor
+        {
+            get => textBoxInput.BackColor;
+            set => textBoxInput.BackColor = value;
+        }
+
+        public Color InputForeColor
+        {
+            get => textBoxInput.ForeColor;
+            set => textBoxInput.ForeColor = value;
+        }
+
+        public void SetReadOnlyOrNoReadOnly()
+        {
+            bool readOnly = ReadOnly;
+            NoReadOnly = readOnly;
+            readOnly = ReadOnly;
+            NoReadOnly = readOnly;
         }
     }
 }

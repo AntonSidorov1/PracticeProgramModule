@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOO_Rythm
 {
-    class ProductsCollection : List<Product>
+    public class ProductsCollection : List<Product>
     {
         public ProductsCollection()
         {
@@ -56,7 +56,51 @@ namespace OOO_Rythm
             FromDB(categoryID, partName, OOO_Rythm.Sort.no, OOO_Rythm.Sort.no);
         }
 
+        public void Update(int productID)
+        {
+            Product product = GetProduct(productID);
+            TableDataBaseRow row = product.GetRowWithoutIDAndArticul();
+           
 
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = "Product";
+
+            query.InputValues.AddRange(row);
+            query.Conditions.Add(new TableDataBaseRow(new TableDataBaseCell[] { product.GetCell("ProductID") }));
+
+            query.Update();
+
+
+        }
+
+        public void Insert(Product product)
+        {
+            
+            TableDataBaseRow row = product.GetRowWithoutID();
+
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = "Product";
+
+            query.InputValues.AddRange(row);
+
+            query.Insert();
+
+
+        }
+
+        public void DeleteFromDB(int productID)
+        {
+            
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = "Product";
+
+            
+            query.Conditions.Add(new TableDataBaseRow(new TableDataBaseCell[] { new TableDataBaseCell("ProductID", productID) }));
+
+            query.Delete();
+
+
+        }
 
         public void FromDB(int categoryID, string partName, Sort sortName, Sort sortCost)
         {
