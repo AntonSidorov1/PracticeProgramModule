@@ -132,6 +132,17 @@ namespace OOO_Rythm
             query.Insert();
         }
 
+        public static void SetUserBlocked(int id, bool blocked = false)
+        {
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = "User";
+            query.InputValues.AddRange(new TableDataBaseCell[] {
+                new TableDataBaseCell("UserBlocked", blocked)
+            });
+            query.Conditions.Add(new TableDataBaseRow(new TableDataBaseCell[] { new TableDataBaseCell("UserID", id) }));
+            query.Update();
+        }
+
         public static void AddUserRole(string login, int roleID = 1)
         {
             AddUserRole(Users.GetUser(login).ID, roleID);

@@ -111,8 +111,11 @@ namespace OOO_Rythm
 
             checkBoxSave.Checked = UserDatas.Default.SaveDatas;
             UserDatas userDatas = UserDatas.Default;
-            textBoxLogin.Text = userDatas.Login;
-            textBoxPassword.Text = userDatas.Password;
+            if (checkBoxSave.Checked)
+            {
+                textBoxLogin.Text = userDatas.Login;
+                textBoxPassword.Text = userDatas.Password;
+            }
             checkBoxSave.CheckedChanged += CheckBoxSave_CheckedChanged;
 
             try
@@ -127,6 +130,13 @@ namespace OOO_Rythm
 
         private void CheckBoxSave_CheckedChanged(object sender, EventArgs e)
         {
+            bool save = (sender as CheckBox).Checked;
+            UserDatas.Default.SaveDatas = save;
+            if(!save)
+            {
+                UserDatas.Default.Login = "";
+                UserDatas.Default.Password = "";
+            }
 
         }
 
@@ -175,7 +185,7 @@ namespace OOO_Rythm
             {
 
                 MessageBox.Show($"Не удалось подключиться к базе данных", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
+                //this.Close();
                 return;
             }
         }
@@ -184,7 +194,30 @@ namespace OOO_Rythm
         {
             try
             {
-                Application.OpenForms["ProductForm"].Close();
+                FormCollection forms = Application.OpenForms;
+                
+                List<int> formID = new List<int>();
+                for (int i = 0; i < forms.Count; i++) 
+                {
+                    if (forms[i] is ProductForm)
+                        formID.Add(i);
+                }
+
+                if (formID.Count > 0)
+                {
+
+
+                    for (int i = 0; i < formID.Count; i++)
+                    {
+                        int index = formID[i];
+                        Application.OpenForms[index].Close();
+                    }
+                }
+                
+            }
+            catch (NullReferenceException)
+            {
+
             }
             catch
             {
@@ -333,8 +366,13 @@ namespace OOO_Rythm
         {
             
             UserDatas userDatas = UserDatas.Default;
-            //if (!userDatas.SaveDatas)
-            //    return;
+            if (!userDatas.SaveDatas)
+            {
+                userDatas.Login = "";
+                userDatas.Password = "";
+                userDatas.Save();
+                return;
+            }
             userDatas.Login = textBoxLogin.Text;
             userDatas.Password = textBoxPassword.Text;
             userDatas.Save();
@@ -342,6 +380,11 @@ namespace OOO_Rythm
 
         private void Autorization_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (!UserDatas.Default.SaveDatas)
+            {
+                UserDatas.Default.Login = "";
+                UserDatas.Default.Password = "";
+            }
             Properties.Settings.Default.Save();
             UserDatas.Default.Save();
         }
@@ -418,6 +461,11 @@ namespace OOO_Rythm
             {
 
             }
+        }
+
+        private void checkBoxSave_CheckedChanged_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -60,6 +60,9 @@ namespace OOO_Rythm
             this.labelRole = new System.Windows.Forms.Label();
             this.buttonRoleApp = new System.Windows.Forms.Button();
             this.buttonDeleteRole = new System.Windows.Forms.Button();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.checkBoxBlocked = new System.Windows.Forms.CheckBox();
+            this.buttonChangeBlocked = new System.Windows.Forms.Button();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
@@ -73,6 +76,7 @@ namespace OOO_Rythm
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconApp
@@ -200,14 +204,16 @@ namespace OOO_Rythm
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.listBoxUser, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.listBoxUser, 1, 3);
             this.tableLayoutPanel2.Controls.Add(this.panelRoles, 2, 1);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel6, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 90);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 4;
+            this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 41F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(798, 341);
@@ -227,7 +233,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(373, 144);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(373, 124);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // textInputLogin
@@ -244,7 +250,7 @@ namespace OOO_Rythm
             this.textInputLogin.Name = "textInputLogin";
             this.textInputLogin.PasswordChar = '\0';
             this.textInputLogin.ReadOnly = false;
-            this.textInputLogin.Size = new System.Drawing.Size(353, 74);
+            this.textInputLogin.Size = new System.Drawing.Size(353, 54);
             this.textInputLogin.TabIndex = 0;
             this.textInputLogin.TextScrollBar = System.Windows.Forms.ScrollBars.None;
             this.textInputLogin.Title = "Логин";
@@ -254,7 +260,7 @@ namespace OOO_Rythm
             // buttonAddUser
             // 
             this.buttonAddUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAddUser.Location = new System.Drawing.Point(10, 104);
+            this.buttonAddUser.Location = new System.Drawing.Point(10, 84);
             this.buttonAddUser.Margin = new System.Windows.Forms.Padding(10);
             this.buttonAddUser.Name = "buttonAddUser";
             this.buttonAddUser.Size = new System.Drawing.Size(166, 30);
@@ -266,7 +272,7 @@ namespace OOO_Rythm
             // buttonDropUser
             // 
             this.buttonDropUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDropUser.Location = new System.Drawing.Point(196, 104);
+            this.buttonDropUser.Location = new System.Drawing.Point(196, 84);
             this.buttonDropUser.Margin = new System.Windows.Forms.Padding(10);
             this.buttonDropUser.Name = "buttonDropUser";
             this.buttonDropUser.Size = new System.Drawing.Size(167, 30);
@@ -280,9 +286,9 @@ namespace OOO_Rythm
             this.listBoxUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxUser.FormattingEnabled = true;
             this.listBoxUser.ItemHeight = 17;
-            this.listBoxUser.Location = new System.Drawing.Point(23, 173);
+            this.listBoxUser.Location = new System.Drawing.Point(23, 194);
             this.listBoxUser.Name = "listBoxUser";
-            this.listBoxUser.Size = new System.Drawing.Size(373, 144);
+            this.listBoxUser.Size = new System.Drawing.Size(373, 124);
             this.listBoxUser.TabIndex = 2;
             this.listBoxUser.SelectedIndexChanged += new System.EventHandler(this.listBoxUser_SelectedIndexChanged);
             // 
@@ -293,8 +299,8 @@ namespace OOO_Rythm
             this.panelRoles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRoles.Location = new System.Drawing.Point(402, 23);
             this.panelRoles.Name = "panelRoles";
-            this.tableLayoutPanel2.SetRowSpan(this.panelRoles, 2);
-            this.panelRoles.Size = new System.Drawing.Size(373, 294);
+            this.tableLayoutPanel2.SetRowSpan(this.panelRoles, 3);
+            this.panelRoles.Size = new System.Drawing.Size(373, 295);
             this.panelRoles.TabIndex = 3;
             // 
             // tableLayoutPanel4
@@ -312,7 +318,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(369, 290);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(369, 291);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // labelLogin
@@ -357,7 +363,7 @@ namespace OOO_Rythm
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(3, 173);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(363, 114);
+            this.groupBox2.Size = new System.Drawing.Size(363, 115);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Изменения ролей";
@@ -369,7 +375,7 @@ namespace OOO_Rythm
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(357, 91);
+            this.panel1.Size = new System.Drawing.Size(357, 92);
             this.panel1.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -387,7 +393,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(353, 87);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(353, 88);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // comboBoxRole
@@ -407,7 +413,7 @@ namespace OOO_Rythm
             this.labelRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.labelRole.Location = new System.Drawing.Point(179, 0);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(171, 43);
+            this.labelRole.Size = new System.Drawing.Size(171, 44);
             this.labelRole.TabIndex = 1;
             this.labelRole.Text = "label1";
             this.labelRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -415,7 +421,7 @@ namespace OOO_Rythm
             // buttonRoleApp
             // 
             this.buttonRoleApp.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonRoleApp.Location = new System.Drawing.Point(3, 46);
+            this.buttonRoleApp.Location = new System.Drawing.Point(3, 47);
             this.buttonRoleApp.Name = "buttonRoleApp";
             this.buttonRoleApp.Size = new System.Drawing.Size(170, 38);
             this.buttonRoleApp.TabIndex = 2;
@@ -426,13 +432,52 @@ namespace OOO_Rythm
             // buttonDeleteRole
             // 
             this.buttonDeleteRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDeleteRole.Location = new System.Drawing.Point(179, 46);
+            this.buttonDeleteRole.Location = new System.Drawing.Point(179, 47);
             this.buttonDeleteRole.Name = "buttonDeleteRole";
             this.buttonDeleteRole.Size = new System.Drawing.Size(171, 38);
             this.buttonDeleteRole.TabIndex = 3;
             this.buttonDeleteRole.Text = "Удалить";
             this.buttonDeleteRole.UseVisualStyleBackColor = true;
             this.buttonDeleteRole.Click += new System.EventHandler(this.buttonDeleteRole_Click);
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.ColumnCount = 2;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.85255F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.14745F));
+            this.tableLayoutPanel6.Controls.Add(this.checkBoxBlocked, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.buttonChangeBlocked, 0, 0);
+            this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(23, 153);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(373, 35);
+            this.tableLayoutPanel6.TabIndex = 4;
+            // 
+            // checkBoxBlocked
+            // 
+            this.checkBoxBlocked.AutoSize = true;
+            this.checkBoxBlocked.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.checkBoxBlocked.Enabled = false;
+            this.checkBoxBlocked.Location = new System.Drawing.Point(132, 3);
+            this.checkBoxBlocked.Name = "checkBoxBlocked";
+            this.checkBoxBlocked.Size = new System.Drawing.Size(238, 29);
+            this.checkBoxBlocked.TabIndex = 0;
+            this.checkBoxBlocked.Text = "Заблокирован";
+            this.checkBoxBlocked.UseVisualStyleBackColor = true;
+            // 
+            // buttonChangeBlocked
+            // 
+            this.buttonChangeBlocked.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonChangeBlocked.Location = new System.Drawing.Point(3, 3);
+            this.buttonChangeBlocked.Name = "buttonChangeBlocked";
+            this.buttonChangeBlocked.Size = new System.Drawing.Size(123, 29);
+            this.buttonChangeBlocked.TabIndex = 1;
+            this.buttonChangeBlocked.Text = "Сменить";
+            this.buttonChangeBlocked.UseVisualStyleBackColor = true;
+            this.buttonChangeBlocked.Click += new System.EventHandler(this.buttonChangeBlocked_Click);
             // 
             // EditUsers
             // 
@@ -467,6 +512,8 @@ namespace OOO_Rythm
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -502,6 +549,9 @@ namespace OOO_Rythm
         private System.Windows.Forms.Label labelRole;
         private System.Windows.Forms.Button buttonRoleApp;
         private System.Windows.Forms.Button buttonDeleteRole;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.CheckBox checkBoxBlocked;
+        private System.Windows.Forms.Button buttonChangeBlocked;
     }
 }
 

@@ -97,7 +97,10 @@ namespace OOO_Rythm
 
                 roles.Clear();
 
-                int userID = Helper.Users.GetUser(labelLogin.Text).ID;
+
+                User user = Helper.Users.GetUser(labelLogin.Text);
+                int userID = user.ID;
+                checkBoxBlocked.Checked = user.Blocked;
 
                 if (Helper.HaveUserRole(userID, rolesIDs))
                 {
@@ -114,6 +117,7 @@ namespace OOO_Rythm
                     {
                         listBoxRole.Enabled = false;
                     }
+                    buttonChangeBlocked.Enabled = userID != Helper.UserID;
                 }
                 else
                 {
@@ -236,6 +240,44 @@ namespace OOO_Rythm
             catch
             {
                 MessageBox.Show("Не удалось удалить роль", "Удаление роли", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+        }
+
+        private void buttonChangeBlocked_Click(object sender, EventArgs e)
+        {
+            User user = Helper.Users.GetUser(labelLogin.Text);
+            int userID = user.ID;
+            bool blocked = !checkBoxBlocked.Checked;
+            string title = "", doing ="";
+            if (blocked)
+            {
+                title = "Блокирововка";
+                doing = "Заблокирова";
+                }
+            else
+            {
+                title = "Разблокировка";
+                doing = "Разблкирова";
+            }
+
+            title += " пользователя";
+            try
+            {
+                Helper.SetUserBlocked(userID, blocked);
+
+                MessageBox.Show($"Пользователь успешно {doing}н", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                getAllUsers();
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show($"Не удалось {doing}ть пользователя", title, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }
