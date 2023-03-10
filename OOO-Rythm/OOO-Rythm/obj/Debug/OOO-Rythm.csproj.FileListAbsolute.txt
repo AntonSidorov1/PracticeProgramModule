@@ -106,7 +106,6 @@ C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.CoreCompileInputs.cache
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.exe
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.pdb
-C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csprojAssemblyReference.cache
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe.config
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.exe
 D:\Users\Anton\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\bin\Debug\OOO-Rythm.pdb
@@ -145,3 +144,4 @@ F:\UP-PM01\Разработка программных модулей\PracticePr
 F:\UP-PM01\Разработка программных модулей\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.NumericControlWithName.resources
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.ComboBoxWithName.resources
 C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO_Rythm.Controls.NumericControlWithName.resources
+C:\Users\stud\Downloads\PracticeProgramModule\OOO-Rythm\OOO-Rythm\obj\Debug\OOO-Rythm.csproj.AssemblyReference.cache

@@ -89,8 +89,15 @@ namespace OOO_Rythm
             numericControlWithNameDiscount.ValueChanged += NumericControlWithNameCost_ValueChanged;
 
             numericCountAtStock.ReadOnlyChanged += NumericCountAtStock_ReadOnlyChanged;
+            numericCountInShop.ReadOnlyChanged += NumericCountInShop_ReadOnlyChanged;
 
             productInPounkt = new RowWithNoteLinkCollection("ProductInStock", "StockID", "QuantityInStock", "ProductID", true);
+            productInShop = new RowWithNoteLinkCollection("ProductInShop", "ShopID", "QuantityInShop", "ProductID", true);
+        }
+
+        private void NumericCountInShop_ReadOnlyChanged(object arg1, EventArgs arg2)
+        {
+            buttonAddShop.Visible = numericCountInShop.NoReadOnly;
         }
 
         private void NumericCountAtStock_ReadOnlyChanged(object arg1, EventArgs arg2)
@@ -98,7 +105,7 @@ namespace OOO_Rythm
             buttonAddStock.Visible = numericCountAtStock.NoReadOnly;
         }
 
-        RowWithNoteLinkCollection productInPounkt;
+        RowWithNoteLinkCollection productInPounkt, productInShop;
 
         public RowWithNoteLink NowStock
         {
@@ -119,6 +126,14 @@ namespace OOO_Rythm
                 
                 IndexNameRow stock = NowStock;
                 return pounkts1.GetRowsFromLink(stock.ID);
+            }
+        }
+
+        public RowWithNoteLink NowPounkt
+        {
+            get
+            {
+                return NowPounkts[comboBoxWithNamePounkt.SelectedIndex];
             }
         }
 
@@ -149,6 +164,28 @@ namespace OOO_Rythm
                 {
                     labelPounkt.Text = "Пункт выдачи отсутствует";
                 }
+
+                SetCountEnabled();
+
+                try
+                {
+                    int product = Product.ID;
+                    int stock = NowPounkt.ID;
+                    if (productInShop.Contains(stock, product))
+                    {
+                        RowWithNoteLink row = productInShop.GetRowsFromIdAndLink(stock, product)[0];
+                        numericCountInShop.Value = row.Value;
+                    }
+                    else
+                    {
+                        numericCountInShop.Value = 0;
+                    }
+                }
+                catch (Exception e)
+                {
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -194,6 +231,10 @@ namespace OOO_Rythm
                 {
                     RowWithNoteLink row = productInPounkt.GetRowsFromIdAndLink(stock, product)[0];
                     numericCountAtStock.Value = row.Value;
+                }
+                else
+                {
+                    numericCountInShop.Value = 0;
                 }
             }
             catch (Exception e)
@@ -345,6 +386,7 @@ namespace OOO_Rythm
         {
             labelShop.Visible = (sender as Controls.ComboBoxWithName).Enabled; 
             labelPounkt.Visible = (sender as Controls.ComboBoxWithName).Enabled;
+            SetCountEnabled();
         }
 
         private void timerDateTime_Tick(object sender, EventArgs e)
@@ -378,6 +420,21 @@ namespace OOO_Rythm
         private void buttonAddShop_Click(object sender, EventArgs e)
         {
 
+            try
+            {
+                int product = Product.ID;
+                int stock = NowPounkt.ID;
+                int count = (int)numericCountInShop.Value;
+                //productInPounkt.Update(product, stock, count);
+                productInShop.Update(stock, product, count);
+
+                MessageBox.Show("Количество товара в магазине успешно изменено", "Редактирование товара", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Не удалось изменить количество товара в магазине", "Редактирование товара", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
@@ -431,7 +488,9 @@ namespace OOO_Rythm
         {
 
             numericCountAtStock.NoReadOnly = comboBoxWithNameStock.Enabled && checkBoxEdit.Checked;
-            
+            numericCountInShop.NoReadOnly = comboBoxWithNamePounkt.Enabled && checkBoxEdit.Checked;
+
+
         }
 
         private void comboBoxWithNameStock_EnabledChanged(object sender, EventArgs e)

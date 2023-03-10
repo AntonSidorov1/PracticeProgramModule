@@ -124,7 +124,7 @@ namespace OOO_Rythm
             query.InputValues.Add(new TableDataBaseCell(LinkColumn, link));
             query.Insert();
 
-            FromDB();
+            
         }
 
         public void Update(int id, int link, object name)
@@ -139,6 +139,8 @@ namespace OOO_Rythm
             }
 
             Insert(id, link, name);
+
+            FromDB();
         }
 
         public void FromDB()
