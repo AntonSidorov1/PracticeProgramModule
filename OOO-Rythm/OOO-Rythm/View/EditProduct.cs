@@ -145,14 +145,18 @@ namespace OOO_Rythm
                 
                 RowWithNoteLinkCollection pounkts = NowPounkts;
                 int pounkt = pounkts[index].ID;
+                bool haveShop = shops.Contains(pounkt);
 
-                if (shops.Contains(pounkt))
+                if (haveShop)
                 {
                     labelShop.Text = "Магазин: " + shops.GetNameFromID(pounkt);
+                    numericCountInShop.NoReadOnly = checkBoxEdit.Checked;
                 }
                 else
                 {
                     labelShop.Text = "Магазин отсутствует";
+                    numericCountInShop.Value = 0;
+                    numericCountInShop.ReadOnly = true;
                 }
 
 
@@ -164,6 +168,9 @@ namespace OOO_Rythm
                 {
                     labelPounkt.Text = "Пункт выдачи отсутствует";
                 }
+
+                if (!haveShop)
+                    return;
 
                 SetCountEnabled();
 
@@ -183,7 +190,7 @@ namespace OOO_Rythm
                 }
                 catch (Exception e)
                 {
-
+                    numericCountInShop.Value = 0;
                 }
 
             }
@@ -425,8 +432,9 @@ namespace OOO_Rythm
                 int product = Product.ID;
                 int stock = NowPounkt.ID;
                 int count = (int)numericCountInShop.Value;
-                //productInPounkt.Update(product, stock, count);
                 productInShop.Update(stock, product, count);
+                //productInPounkt.Update(stock, product, count);
+                //productInShop.Update(stock, count, product);
 
                 MessageBox.Show("Количество товара в магазине успешно изменено", "Редактирование товара", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }

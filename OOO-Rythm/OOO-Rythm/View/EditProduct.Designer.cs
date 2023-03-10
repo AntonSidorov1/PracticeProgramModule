@@ -49,29 +49,29 @@ namespace OOO_Rythm
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.checkBoxEdit = new System.Windows.Forms.CheckBox();
+            this.textInputArticul = new OOO_Rythm.TextInput();
+            this.textInputName = new OOO_Rythm.TextInput();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelCost = new System.Windows.Forms.Label();
-            this.panelCount = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.labelShop = new System.Windows.Forms.Label();
-            this.labelPounkt = new System.Windows.Forms.Label();
-            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonAddStock = new System.Windows.Forms.Button();
-            this.textInputArticul = new OOO_Rythm.TextInput();
-            this.textInputName = new OOO_Rythm.TextInput();
             this.comboBoxWithNameManufacture = new OOO_Rythm.Controls.ComboBoxWithName();
             this.comboBoxWithNameCategory = new OOO_Rythm.Controls.ComboBoxWithName();
             this.comboBoxWithNameSupplier = new OOO_Rythm.Controls.ComboBoxWithName();
             this.textInputDescription = new OOO_Rythm.TextInput();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.numericControlWithNameCost = new OOO_Rythm.Controls.NumericControlWithName();
             this.numericControlWithNameDiscount = new OOO_Rythm.Controls.NumericControlWithName();
+            this.labelCost = new System.Windows.Forms.Label();
+            this.panelCount = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.comboBoxWithNameSity = new OOO_Rythm.Controls.ComboBoxWithName();
             this.comboBoxWithNameStock = new OOO_Rythm.Controls.ComboBoxWithName();
             this.comboBoxWithNamePounkt = new OOO_Rythm.Controls.ComboBoxWithName();
+            this.labelShop = new System.Windows.Forms.Label();
+            this.labelPounkt = new System.Windows.Forms.Label();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonAddStock = new System.Windows.Forms.Button();
             this.numericCountAtStock = new OOO_Rythm.Controls.NumericControlWithName();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonAddShop = new System.Windows.Forms.Button();
@@ -198,7 +198,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
             this.tableLayoutPanel7.RowCount = 1;
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1099, 57);
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1099, 56);
             this.tableLayoutPanel7.TabIndex = 1;
             // 
             // buttonEdit
@@ -206,7 +206,7 @@ namespace OOO_Rythm
             this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonEdit.Location = new System.Drawing.Point(277, 3);
             this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(268, 51);
+            this.buttonEdit.Size = new System.Drawing.Size(268, 50);
             this.buttonEdit.TabIndex = 0;
             this.buttonEdit.Text = "Редактировать";
             this.buttonEdit.UseVisualStyleBackColor = true;
@@ -218,7 +218,7 @@ namespace OOO_Rythm
             this.buttonDropProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonDropProduct.Location = new System.Drawing.Point(551, 3);
             this.buttonDropProduct.Name = "buttonDropProduct";
-            this.buttonDropProduct.Size = new System.Drawing.Size(268, 51);
+            this.buttonDropProduct.Size = new System.Drawing.Size(268, 50);
             this.buttonDropProduct.TabIndex = 1;
             this.buttonDropProduct.Text = "Удалить товар";
             this.buttonDropProduct.UseVisualStyleBackColor = true;
@@ -231,9 +231,9 @@ namespace OOO_Rythm
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelDate,
             this.toolStripStatusLabelTime});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 57);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 56);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1099, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(1099, 23);
             this.statusStrip1.TabIndex = 0;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -241,14 +241,14 @@ namespace OOO_Rythm
             // 
             this.toolStripStatusLabelDate.BackColor = System.Drawing.Color.Transparent;
             this.toolStripStatusLabelDate.Name = "toolStripStatusLabelDate";
-            this.toolStripStatusLabelDate.Size = new System.Drawing.Size(175, 17);
+            this.toolStripStatusLabelDate.Size = new System.Drawing.Size(218, 17);
             this.toolStripStatusLabelDate.Text = "toolStripStatusLabel1";
             // 
             // toolStripStatusLabelTime
             // 
             this.toolStripStatusLabelTime.BackColor = System.Drawing.Color.Transparent;
             this.toolStripStatusLabelTime.Name = "toolStripStatusLabelTime";
-            this.toolStripStatusLabelTime.Size = new System.Drawing.Size(175, 17);
+            this.toolStripStatusLabelTime.Size = new System.Drawing.Size(218, 17);
             this.toolStripStatusLabelTime.Text = "toolStripStatusLabel1";
             // 
             // timerDateTime
@@ -317,6 +317,54 @@ namespace OOO_Rythm
             this.checkBoxEdit.Visible = false;
             this.checkBoxEdit.CheckedChanged += new System.EventHandler(this.checkBoxEdit_CheckedChanged);
             // 
+            // textInputArticul
+            // 
+            this.textInputArticul.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textInputArticul.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textInputArticul.InputBackColor = System.Drawing.Color.White;
+            this.textInputArticul.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.textInputArticul.InputText = "";
+            this.textInputArticul.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textInputArticul.Location = new System.Drawing.Point(327, 3);
+            this.textInputArticul.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textInputArticul.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textInputArticul.MultiLine = false;
+            this.textInputArticul.Name = "textInputArticul";
+            this.textInputArticul.NoReadOnly = false;
+            this.textInputArticul.PasswordChar = '\0';
+            this.textInputArticul.ReadOnly = true;
+            this.textInputArticul.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textInputArticul.Size = new System.Drawing.Size(367, 72);
+            this.textInputArticul.TabIndex = 1;
+            this.textInputArticul.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textInputArticul.Title = "Артикул";
+            this.textInputArticul.UseSystemPasswordChar = false;
+            this.textInputArticul.Value = "";
+            // 
+            // textInputName
+            // 
+            this.textInputName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textInputName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textInputName.InputBackColor = System.Drawing.Color.White;
+            this.textInputName.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.textInputName.InputText = "";
+            this.textInputName.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textInputName.Location = new System.Drawing.Point(702, 3);
+            this.textInputName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textInputName.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textInputName.MultiLine = false;
+            this.textInputName.Name = "textInputName";
+            this.textInputName.NoReadOnly = false;
+            this.textInputName.PasswordChar = '\0';
+            this.textInputName.ReadOnly = true;
+            this.textInputName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textInputName.Size = new System.Drawing.Size(343, 72);
+            this.textInputName.TabIndex = 2;
+            this.textInputName.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textInputName.Title = "Название";
+            this.textInputName.UseSystemPasswordChar = false;
+            this.textInputName.Value = "";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.panel2);
@@ -333,9 +381,9 @@ namespace OOO_Rythm
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.tableLayoutPanel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 17);
+            this.panel2.Location = new System.Drawing.Point(3, 20);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1047, 202);
+            this.panel2.Size = new System.Drawing.Size(1047, 199);
             this.panel2.TabIndex = 0;
             // 
             // tableLayoutPanel4
@@ -353,7 +401,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(1043, 198);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(1043, 195);
             this.tableLayoutPanel4.TabIndex = 0;
             // 
             // tableLayoutPanel5
@@ -371,8 +419,77 @@ namespace OOO_Rythm
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(254, 192);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(254, 189);
             this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // comboBoxWithNameManufacture
+            // 
+            this.comboBoxWithNameManufacture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameManufacture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameManufacture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameManufacture.Location = new System.Drawing.Point(4, 66);
+            this.comboBoxWithNameManufacture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNameManufacture.Name = "comboBoxWithNameManufacture";
+            this.comboBoxWithNameManufacture.NoReadOnly = false;
+            this.comboBoxWithNameManufacture.ReadOnly = true;
+            this.comboBoxWithNameManufacture.SelectedIndex = -1;
+            this.comboBoxWithNameManufacture.Size = new System.Drawing.Size(246, 57);
+            this.comboBoxWithNameManufacture.TabIndex = 1;
+            this.comboBoxWithNameManufacture.Title = "Производитель";
+            // 
+            // comboBoxWithNameCategory
+            // 
+            this.comboBoxWithNameCategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameCategory.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameCategory.Location = new System.Drawing.Point(5, 3);
+            this.comboBoxWithNameCategory.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
+            this.comboBoxWithNameCategory.Name = "comboBoxWithNameCategory";
+            this.comboBoxWithNameCategory.NoReadOnly = false;
+            this.comboBoxWithNameCategory.ReadOnly = true;
+            this.comboBoxWithNameCategory.SelectedIndex = -1;
+            this.comboBoxWithNameCategory.Size = new System.Drawing.Size(244, 57);
+            this.comboBoxWithNameCategory.TabIndex = 1;
+            this.comboBoxWithNameCategory.Title = "Категория";
+            // 
+            // comboBoxWithNameSupplier
+            // 
+            this.comboBoxWithNameSupplier.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameSupplier.Location = new System.Drawing.Point(6, 129);
+            this.comboBoxWithNameSupplier.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
+            this.comboBoxWithNameSupplier.Name = "comboBoxWithNameSupplier";
+            this.comboBoxWithNameSupplier.NoReadOnly = false;
+            this.comboBoxWithNameSupplier.ReadOnly = true;
+            this.comboBoxWithNameSupplier.SelectedIndex = -1;
+            this.comboBoxWithNameSupplier.Size = new System.Drawing.Size(242, 57);
+            this.comboBoxWithNameSupplier.TabIndex = 1;
+            this.comboBoxWithNameSupplier.Title = "Поставщик";
+            // 
+            // textInputDescription
+            // 
+            this.textInputDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textInputDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textInputDescription.InputBackColor = System.Drawing.Color.White;
+            this.textInputDescription.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.textInputDescription.InputText = "";
+            this.textInputDescription.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textInputDescription.Location = new System.Drawing.Point(264, 3);
+            this.textInputDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textInputDescription.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textInputDescription.MultiLine = true;
+            this.textInputDescription.Name = "textInputDescription";
+            this.textInputDescription.NoReadOnly = false;
+            this.textInputDescription.PasswordChar = '\0';
+            this.textInputDescription.ReadOnly = true;
+            this.textInputDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textInputDescription.Size = new System.Drawing.Size(252, 189);
+            this.textInputDescription.TabIndex = 1;
+            this.textInputDescription.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textInputDescription.Title = "Описание";
+            this.textInputDescription.UseSystemPasswordChar = false;
+            this.textInputDescription.Value = "";
             // 
             // tableLayoutPanel6
             // 
@@ -388,16 +505,88 @@ namespace OOO_Rythm
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(254, 192);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(254, 189);
             this.tableLayoutPanel6.TabIndex = 2;
+            // 
+            // numericControlWithNameCost
+            // 
+            this.numericControlWithNameCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.numericControlWithNameCost.DecimalPlaces = 2;
+            this.numericControlWithNameCost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericControlWithNameCost.Incriment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericControlWithNameCost.InputBackColor = System.Drawing.Color.White;
+            this.numericControlWithNameCost.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.numericControlWithNameCost.Location = new System.Drawing.Point(4, 3);
+            this.numericControlWithNameCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.numericControlWithNameCost.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numericControlWithNameCost.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericControlWithNameCost.Name = "numericControlWithNameCost";
+            this.numericControlWithNameCost.NoReadOnly = false;
+            this.numericControlWithNameCost.ReadOnly = true;
+            this.numericControlWithNameCost.Size = new System.Drawing.Size(246, 57);
+            this.numericControlWithNameCost.TabIndex = 0;
+            this.numericControlWithNameCost.Title = "Цена без скидки";
+            this.numericControlWithNameCost.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            // 
+            // numericControlWithNameDiscount
+            // 
+            this.numericControlWithNameDiscount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.numericControlWithNameDiscount.DecimalPlaces = 0;
+            this.numericControlWithNameDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericControlWithNameDiscount.Incriment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericControlWithNameDiscount.InputBackColor = System.Drawing.Color.White;
+            this.numericControlWithNameDiscount.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.numericControlWithNameDiscount.Location = new System.Drawing.Point(4, 66);
+            this.numericControlWithNameDiscount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.numericControlWithNameDiscount.Maximum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numericControlWithNameDiscount.Minimum = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.numericControlWithNameDiscount.Name = "numericControlWithNameDiscount";
+            this.numericControlWithNameDiscount.NoReadOnly = false;
+            this.numericControlWithNameDiscount.ReadOnly = true;
+            this.numericControlWithNameDiscount.Size = new System.Drawing.Size(246, 57);
+            this.numericControlWithNameDiscount.TabIndex = 1;
+            this.numericControlWithNameDiscount.Title = "Скидка";
+            this.numericControlWithNameDiscount.Value = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
             // 
             // labelCost
             // 
             this.labelCost.AutoSize = true;
             this.labelCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCost.Location = new System.Drawing.Point(3, 128);
+            this.labelCost.Location = new System.Drawing.Point(3, 126);
             this.labelCost.Name = "labelCost";
-            this.labelCost.Size = new System.Drawing.Size(248, 64);
+            this.labelCost.Size = new System.Drawing.Size(248, 63);
             this.labelCost.TabIndex = 2;
             this.labelCost.Text = "label1";
             this.labelCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -434,6 +623,53 @@ namespace OOO_Rythm
             this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.Size = new System.Drawing.Size(1049, 116);
             this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // comboBoxWithNameSity
+            // 
+            this.comboBoxWithNameSity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameSity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameSity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameSity.Location = new System.Drawing.Point(4, 3);
+            this.comboBoxWithNameSity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNameSity.Name = "comboBoxWithNameSity";
+            this.comboBoxWithNameSity.NoReadOnly = true;
+            this.comboBoxWithNameSity.ReadOnly = false;
+            this.comboBoxWithNameSity.SelectedIndex = -1;
+            this.comboBoxWithNameSity.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNameSity.TabIndex = 0;
+            this.comboBoxWithNameSity.Title = "Город";
+            // 
+            // comboBoxWithNameStock
+            // 
+            this.comboBoxWithNameStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameStock.Location = new System.Drawing.Point(266, 3);
+            this.comboBoxWithNameStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNameStock.Name = "comboBoxWithNameStock";
+            this.comboBoxWithNameStock.NoReadOnly = true;
+            this.comboBoxWithNameStock.ReadOnly = false;
+            this.comboBoxWithNameStock.SelectedIndex = -1;
+            this.comboBoxWithNameStock.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNameStock.TabIndex = 1;
+            this.comboBoxWithNameStock.Title = "Склад";
+            this.comboBoxWithNameStock.EnabledChanged += new System.EventHandler(this.comboBoxWithNameStock_EnabledChanged);
+            // 
+            // comboBoxWithNamePounkt
+            // 
+            this.comboBoxWithNamePounkt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNamePounkt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNamePounkt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNamePounkt.Location = new System.Drawing.Point(528, 3);
+            this.comboBoxWithNamePounkt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNamePounkt.Name = "comboBoxWithNamePounkt";
+            this.comboBoxWithNamePounkt.NoReadOnly = true;
+            this.comboBoxWithNamePounkt.ReadOnly = false;
+            this.comboBoxWithNamePounkt.SelectedIndex = -1;
+            this.comboBoxWithNamePounkt.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNamePounkt.TabIndex = 2;
+            this.comboBoxWithNamePounkt.Title = "Пункты";
+            this.comboBoxWithNamePounkt.EnabledChanged += new System.EventHandler(this.comboBoxWithNamePounkt_EnabledChanged);
             // 
             // labelShop
             // 
@@ -483,242 +719,6 @@ namespace OOO_Rythm
             this.buttonAddStock.UseVisualStyleBackColor = true;
             this.buttonAddStock.Visible = false;
             this.buttonAddStock.Click += new System.EventHandler(this.buttonAddStock_Click);
-            // 
-            // textInputArticul
-            // 
-            this.textInputArticul.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textInputArticul.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textInputArticul.InputBackColor = System.Drawing.Color.White;
-            this.textInputArticul.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.textInputArticul.InputText = "";
-            this.textInputArticul.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textInputArticul.Location = new System.Drawing.Point(327, 3);
-            this.textInputArticul.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textInputArticul.MinimumSize = new System.Drawing.Size(124, 53);
-            this.textInputArticul.MultiLine = false;
-            this.textInputArticul.Name = "textInputArticul";
-            this.textInputArticul.NoReadOnly = false;
-            this.textInputArticul.PasswordChar = '\0';
-            this.textInputArticul.ReadOnly = true;
-            this.textInputArticul.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textInputArticul.Size = new System.Drawing.Size(367, 72);
-            this.textInputArticul.TabIndex = 1;
-            this.textInputArticul.TextScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.textInputArticul.Title = "Артикул";
-            this.textInputArticul.UseSystemPasswordChar = false;
-            this.textInputArticul.Value = "";
-            // 
-            // textInputName
-            // 
-            this.textInputName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textInputName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textInputName.InputBackColor = System.Drawing.Color.White;
-            this.textInputName.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.textInputName.InputText = "";
-            this.textInputName.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textInputName.Location = new System.Drawing.Point(702, 3);
-            this.textInputName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textInputName.MinimumSize = new System.Drawing.Size(124, 53);
-            this.textInputName.MultiLine = false;
-            this.textInputName.Name = "textInputName";
-            this.textInputName.NoReadOnly = false;
-            this.textInputName.PasswordChar = '\0';
-            this.textInputName.ReadOnly = true;
-            this.textInputName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textInputName.Size = new System.Drawing.Size(343, 72);
-            this.textInputName.TabIndex = 2;
-            this.textInputName.TextScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.textInputName.Title = "Название";
-            this.textInputName.UseSystemPasswordChar = false;
-            this.textInputName.Value = "";
-            // 
-            // comboBoxWithNameManufacture
-            // 
-            this.comboBoxWithNameManufacture.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNameManufacture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNameManufacture.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNameManufacture.Location = new System.Drawing.Point(4, 67);
-            this.comboBoxWithNameManufacture.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxWithNameManufacture.Name = "comboBoxWithNameManufacture";
-            this.comboBoxWithNameManufacture.NoReadOnly = false;
-            this.comboBoxWithNameManufacture.ReadOnly = true;
-            this.comboBoxWithNameManufacture.SelectedIndex = -1;
-            this.comboBoxWithNameManufacture.Size = new System.Drawing.Size(246, 58);
-            this.comboBoxWithNameManufacture.TabIndex = 1;
-            this.comboBoxWithNameManufacture.Title = "Производитель";
-            // 
-            // comboBoxWithNameCategory
-            // 
-            this.comboBoxWithNameCategory.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNameCategory.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNameCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNameCategory.Location = new System.Drawing.Point(5, 3);
-            this.comboBoxWithNameCategory.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
-            this.comboBoxWithNameCategory.Name = "comboBoxWithNameCategory";
-            this.comboBoxWithNameCategory.NoReadOnly = false;
-            this.comboBoxWithNameCategory.ReadOnly = true;
-            this.comboBoxWithNameCategory.SelectedIndex = -1;
-            this.comboBoxWithNameCategory.Size = new System.Drawing.Size(244, 58);
-            this.comboBoxWithNameCategory.TabIndex = 1;
-            this.comboBoxWithNameCategory.Title = "Категория";
-            // 
-            // comboBoxWithNameSupplier
-            // 
-            this.comboBoxWithNameSupplier.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNameSupplier.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNameSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNameSupplier.Location = new System.Drawing.Point(6, 131);
-            this.comboBoxWithNameSupplier.Margin = new System.Windows.Forms.Padding(6, 3, 6, 3);
-            this.comboBoxWithNameSupplier.Name = "comboBoxWithNameSupplier";
-            this.comboBoxWithNameSupplier.NoReadOnly = false;
-            this.comboBoxWithNameSupplier.ReadOnly = true;
-            this.comboBoxWithNameSupplier.SelectedIndex = -1;
-            this.comboBoxWithNameSupplier.Size = new System.Drawing.Size(242, 58);
-            this.comboBoxWithNameSupplier.TabIndex = 1;
-            this.comboBoxWithNameSupplier.Title = "Поставщик";
-            // 
-            // textInputDescription
-            // 
-            this.textInputDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textInputDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textInputDescription.InputBackColor = System.Drawing.Color.White;
-            this.textInputDescription.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.textInputDescription.InputText = "";
-            this.textInputDescription.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textInputDescription.Location = new System.Drawing.Point(264, 3);
-            this.textInputDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textInputDescription.MinimumSize = new System.Drawing.Size(124, 53);
-            this.textInputDescription.MultiLine = true;
-            this.textInputDescription.Name = "textInputDescription";
-            this.textInputDescription.NoReadOnly = false;
-            this.textInputDescription.PasswordChar = '\0';
-            this.textInputDescription.ReadOnly = true;
-            this.textInputDescription.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textInputDescription.Size = new System.Drawing.Size(252, 192);
-            this.textInputDescription.TabIndex = 1;
-            this.textInputDescription.TextScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.textInputDescription.Title = "Описание";
-            this.textInputDescription.UseSystemPasswordChar = false;
-            this.textInputDescription.Value = "";
-            // 
-            // numericControlWithNameCost
-            // 
-            this.numericControlWithNameCost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.numericControlWithNameCost.DecimalPlaces = 2;
-            this.numericControlWithNameCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericControlWithNameCost.Incriment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericControlWithNameCost.InputBackColor = System.Drawing.Color.White;
-            this.numericControlWithNameCost.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.numericControlWithNameCost.Location = new System.Drawing.Point(4, 3);
-            this.numericControlWithNameCost.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericControlWithNameCost.Maximum = new decimal(new int[] {
-            10000,
-            0,
-            0,
-            0});
-            this.numericControlWithNameCost.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.numericControlWithNameCost.Name = "numericControlWithNameCost";
-            this.numericControlWithNameCost.NoReadOnly = false;
-            this.numericControlWithNameCost.ReadOnly = true;
-            this.numericControlWithNameCost.Size = new System.Drawing.Size(246, 58);
-            this.numericControlWithNameCost.TabIndex = 0;
-            this.numericControlWithNameCost.Title = "Цена без скидки";
-            this.numericControlWithNameCost.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            // 
-            // numericControlWithNameDiscount
-            // 
-            this.numericControlWithNameDiscount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.numericControlWithNameDiscount.DecimalPlaces = 0;
-            this.numericControlWithNameDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericControlWithNameDiscount.Incriment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.numericControlWithNameDiscount.InputBackColor = System.Drawing.Color.White;
-            this.numericControlWithNameDiscount.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.numericControlWithNameDiscount.Location = new System.Drawing.Point(4, 67);
-            this.numericControlWithNameDiscount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.numericControlWithNameDiscount.Maximum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            0});
-            this.numericControlWithNameDiscount.Minimum = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.numericControlWithNameDiscount.Name = "numericControlWithNameDiscount";
-            this.numericControlWithNameDiscount.NoReadOnly = false;
-            this.numericControlWithNameDiscount.ReadOnly = true;
-            this.numericControlWithNameDiscount.Size = new System.Drawing.Size(246, 58);
-            this.numericControlWithNameDiscount.TabIndex = 1;
-            this.numericControlWithNameDiscount.Title = "Скидка";
-            this.numericControlWithNameDiscount.Value = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            // 
-            // comboBoxWithNameSity
-            // 
-            this.comboBoxWithNameSity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNameSity.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNameSity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNameSity.Location = new System.Drawing.Point(4, 3);
-            this.comboBoxWithNameSity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxWithNameSity.Name = "comboBoxWithNameSity";
-            this.comboBoxWithNameSity.NoReadOnly = true;
-            this.comboBoxWithNameSity.ReadOnly = false;
-            this.comboBoxWithNameSity.SelectedIndex = -1;
-            this.comboBoxWithNameSity.Size = new System.Drawing.Size(254, 52);
-            this.comboBoxWithNameSity.TabIndex = 0;
-            this.comboBoxWithNameSity.Title = "Город";
-            // 
-            // comboBoxWithNameStock
-            // 
-            this.comboBoxWithNameStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNameStock.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNameStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNameStock.Location = new System.Drawing.Point(266, 3);
-            this.comboBoxWithNameStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxWithNameStock.Name = "comboBoxWithNameStock";
-            this.comboBoxWithNameStock.NoReadOnly = true;
-            this.comboBoxWithNameStock.ReadOnly = false;
-            this.comboBoxWithNameStock.SelectedIndex = -1;
-            this.comboBoxWithNameStock.Size = new System.Drawing.Size(254, 52);
-            this.comboBoxWithNameStock.TabIndex = 1;
-            this.comboBoxWithNameStock.Title = "Склад";
-            this.comboBoxWithNameStock.EnabledChanged += new System.EventHandler(this.comboBoxWithNameStock_EnabledChanged);
-            // 
-            // comboBoxWithNamePounkt
-            // 
-            this.comboBoxWithNamePounkt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.comboBoxWithNamePounkt.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBoxWithNamePounkt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxWithNamePounkt.Location = new System.Drawing.Point(528, 3);
-            this.comboBoxWithNamePounkt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.comboBoxWithNamePounkt.Name = "comboBoxWithNamePounkt";
-            this.comboBoxWithNamePounkt.NoReadOnly = true;
-            this.comboBoxWithNamePounkt.ReadOnly = false;
-            this.comboBoxWithNamePounkt.SelectedIndex = -1;
-            this.comboBoxWithNamePounkt.Size = new System.Drawing.Size(254, 52);
-            this.comboBoxWithNamePounkt.TabIndex = 2;
-            this.comboBoxWithNamePounkt.Title = "Пункты";
-            this.comboBoxWithNamePounkt.EnabledChanged += new System.EventHandler(this.comboBoxWithNamePounkt_EnabledChanged);
             // 
             // numericCountAtStock
             // 
@@ -812,7 +812,7 @@ namespace OOO_Rythm
             this.numericCountInShop.ReadOnly = true;
             this.numericCountInShop.Size = new System.Drawing.Size(200, 48);
             this.numericCountInShop.TabIndex = 1;
-            this.numericCountInShop.Title = "Количество на складе";
+            this.numericCountInShop.Title = "Количество в магазине";
             this.numericCountInShop.Value = new decimal(new int[] {
             0,
             0,
@@ -821,7 +821,7 @@ namespace OOO_Rythm
             // 
             // EditProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1099, 632);
