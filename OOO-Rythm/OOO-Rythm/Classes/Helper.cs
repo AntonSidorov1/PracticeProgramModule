@@ -67,6 +67,14 @@ namespace OOO_Rythm
 
         static TableDataBaseRow userDatas;
 
+        static string login = "";
+
+        public static string Login
+        {
+            get => login;
+            set => login = value;
+        }
+
         public static void UserInput(string login, string password, bool systemConnection = true)
         {
             DataBaseQuery query = systemConnection? new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection()) : new DataBaseQuery(new DatabaseConnectionRythm(Connection.ConnectionString));
@@ -83,6 +91,7 @@ namespace OOO_Rythm
                 ) ;
             TableDataBaseGrid table = query.GetCells();
             UserDatas = table[0];
+            Login = login;
         }
 
         static UsersCollection users = new UsersCollection();

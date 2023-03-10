@@ -79,6 +79,7 @@ namespace OOO_Rythm
             this.listBoxRole = new System.Windows.Forms.ListBox();
             this.buttonDatas = new System.Windows.Forms.Button();
             this.labelFIO = new System.Windows.Forms.Label();
+            this.labelLogin = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
@@ -292,7 +293,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.11796F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 77.88203F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel4.Controls.Add(this.buttonEditUser, 1, 1);
             this.tableLayoutPanel4.Controls.Add(this.dataGridViewProduct, 2, 2);
             this.tableLayoutPanel4.Controls.Add(this.tableLayoutPanel6, 2, 1);
@@ -341,7 +342,7 @@ namespace OOO_Rythm
             this.dataGridViewProduct.RowHeadersVisible = false;
             this.dataGridViewProduct.RowHeadersWidth = 51;
             this.dataGridViewProduct.RowTemplate.Height = 24;
-            this.dataGridViewProduct.Size = new System.Drawing.Size(622, 340);
+            this.dataGridViewProduct.Size = new System.Drawing.Size(620, 340);
             this.dataGridViewProduct.TabIndex = 0;
             this.dataGridViewProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellContentClick);
             this.dataGridViewProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewProduct_CellContentDoubleClick);
@@ -418,7 +419,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel6.RowCount = 2;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(622, 61);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(620, 61);
             this.tableLayoutPanel6.TabIndex = 4;
             // 
             // labelCount
@@ -456,7 +457,7 @@ namespace OOO_Rythm
             "По убыванию"});
             this.comboBoxSortCost.Location = new System.Drawing.Point(231, 33);
             this.comboBoxSortCost.Name = "comboBoxSortCost";
-            this.comboBoxSortCost.Size = new System.Drawing.Size(180, 25);
+            this.comboBoxSortCost.Size = new System.Drawing.Size(179, 25);
             this.comboBoxSortCost.TabIndex = 2;
             this.comboBoxSortCost.SelectedIndexChanged += new System.EventHandler(this.comboBoxSortName_SelectedIndexChanged);
             // 
@@ -481,7 +482,7 @@ namespace OOO_Rythm
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label2.Location = new System.Drawing.Point(231, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 30);
+            this.label2.Size = new System.Drawing.Size(179, 30);
             this.label2.TabIndex = 3;
             this.label2.Text = "Цена без скидки";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -494,7 +495,7 @@ namespace OOO_Rythm
             this.textInputName.InputForeColor = System.Drawing.SystemColors.WindowText;
             this.textInputName.InputText = "";
             this.textInputName.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textInputName.Location = new System.Drawing.Point(418, 3);
+            this.textInputName.Location = new System.Drawing.Point(417, 3);
             this.textInputName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.textInputName.MinimumSize = new System.Drawing.Size(124, 53);
             this.textInputName.MultiLine = false;
@@ -504,7 +505,7 @@ namespace OOO_Rythm
             this.textInputName.ReadOnly = false;
             this.tableLayoutPanel6.SetRowSpan(this.textInputName, 2);
             this.textInputName.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.textInputName.Size = new System.Drawing.Size(200, 55);
+            this.textInputName.Size = new System.Drawing.Size(199, 55);
             this.textInputName.TabIndex = 4;
             this.textInputName.TextScrollBar = System.Windows.Forms.ScrollBars.None;
             this.textInputName.Title = "Поиск по названию";
@@ -650,16 +651,17 @@ namespace OOO_Rythm
             this.tableLayoutPanel3.Controls.Add(this.listBoxRole, 1, 2);
             this.tableLayoutPanel3.Controls.Add(this.buttonDatas, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.labelFIO, 1, 4);
+            this.tableLayoutPanel3.Controls.Add(this.labelLogin, 1, 5);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 6;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 57.89474F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.32964F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.77562F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 62.42775F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.91908F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.65318F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(254, 452);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
@@ -667,10 +669,10 @@ namespace OOO_Rythm
             // 
             this.labelRole.AutoSize = true;
             this.labelRole.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelRole.Location = new System.Drawing.Point(40, 299);
+            this.labelRole.Location = new System.Drawing.Point(40, 306);
             this.labelRole.Margin = new System.Windows.Forms.Padding(20);
             this.labelRole.Name = "labelRole";
-            this.labelRole.Size = new System.Drawing.Size(174, 37);
+            this.labelRole.Size = new System.Drawing.Size(174, 22);
             this.labelRole.TabIndex = 0;
             this.labelRole.Text = "label1";
             this.labelRole.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -683,7 +685,7 @@ namespace OOO_Rythm
             this.listBoxRole.Location = new System.Drawing.Point(35, 85);
             this.listBoxRole.Margin = new System.Windows.Forms.Padding(15);
             this.listBoxRole.Name = "listBoxRole";
-            this.listBoxRole.Size = new System.Drawing.Size(184, 179);
+            this.listBoxRole.Size = new System.Drawing.Size(184, 186);
             this.listBoxRole.TabIndex = 1;
             this.listBoxRole.SelectedIndexChanged += new System.EventHandler(this.listBoxRole_SelectedIndexChanged);
             // 
@@ -703,12 +705,23 @@ namespace OOO_Rythm
             // 
             this.labelFIO.AutoSize = true;
             this.labelFIO.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelFIO.Location = new System.Drawing.Point(23, 356);
+            this.labelFIO.Location = new System.Drawing.Point(23, 348);
             this.labelFIO.Name = "labelFIO";
-            this.labelFIO.Size = new System.Drawing.Size(208, 75);
+            this.labelFIO.Size = new System.Drawing.Size(208, 68);
             this.labelFIO.TabIndex = 3;
             this.labelFIO.Text = "label1";
             this.labelFIO.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelLogin
+            // 
+            this.labelLogin.AutoSize = true;
+            this.labelLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelLogin.Location = new System.Drawing.Point(23, 416);
+            this.labelLogin.Name = "labelLogin";
+            this.labelLogin.Size = new System.Drawing.Size(208, 36);
+            this.labelLogin.TabIndex = 4;
+            this.labelLogin.Text = ".";
+            this.labelLogin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ProductForm
             // 
@@ -803,6 +816,7 @@ namespace OOO_Rythm
         private System.Windows.Forms.ComboBox comboBoxDiscounts;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
         private System.Windows.Forms.Button buttonAddProduct;
+        private System.Windows.Forms.Label labelLogin;
     }
 }
 

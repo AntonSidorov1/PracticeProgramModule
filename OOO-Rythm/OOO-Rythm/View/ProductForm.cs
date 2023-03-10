@@ -247,6 +247,7 @@ namespace OOO_Rythm
                     {
                         listBoxRole.Visible = false;
                         buttonDatas.Visible = false;
+                        labelLogin.Visible = false;
                         labelRole.Text = "Гость";
                         Helper.GetRoles();
                         role = Helper.Roles.Goest;
@@ -257,6 +258,7 @@ namespace OOO_Rythm
                     Helper.UserID = 0;
                     listBoxRole.Visible = false;
                     buttonDatas.Visible = false;
+                    labelLogin.Visible = false;
                     labelRole.Text = "Гость";
                     Helper.GetRoles();
                     role = Helper.Roles.Goest;
@@ -287,7 +289,13 @@ namespace OOO_Rythm
             if (Helper.UserID == 0)
             {
                 labelFIO.Visible = false;
+                labelLogin.Visible = false;
                 return;
+            }
+            else
+            {
+                labelLogin.Visible = true;
+                labelLogin.Text = Helper.Login;
             }
             if(!Helper.HaveUserFIO())
             {
