@@ -12,7 +12,7 @@ namespace OOO_Rythm
 {
     public partial class EditProduct : Form
     {
-        
+
 
         public EditProduct()
         {
@@ -34,7 +34,7 @@ namespace OOO_Rythm
             textInputDescription.ScrollBars = ScrollBars.Both;
 
             categories = new IndexNameRowsCollection("ProductCategory", "CategoryID", "CategoryName", true);
-            for(int i = 0; i < categories.Count; i++)
+            for (int i = 0; i < categories.Count; i++)
             {
                 comboBoxWithNameCategory.Items.Add(categories[i].Name);
             }
@@ -66,9 +66,9 @@ namespace OOO_Rythm
             pounkts2 = new RowWithNoteLinkCollection("Pounkt", "PounktID", "PounktAddress", "PounktOrganizationID", true);
 
             RowWithNoteLinkCollection pounkts = new RowWithNoteLinkCollection();
-            
+
             pounkts2 = pounkts2.GetRowsFromLink(ourOrganization.ID);
-            for (int i = 0; i < pounkts2.Count; i++) 
+            for (int i = 0; i < pounkts2.Count; i++)
             {
                 RowWithNoteLink pounkt = pounkts1.GetRowFromID(pounkts2[i].ID);
                 pounkts.Add(pounkt);
@@ -87,6 +87,28 @@ namespace OOO_Rythm
 
             numericControlWithNameCost.ValueChanged += NumericControlWithNameCost_ValueChanged;
             numericControlWithNameDiscount.ValueChanged += NumericControlWithNameCost_ValueChanged;
+
+            numericCountAtStock.ReadOnlyChanged += NumericCountAtStock_ReadOnlyChanged;
+
+            productInPounkt = new RowWithNoteLinkCollection("ProductInStock", "StockID", "QuantityInStock", "ProductID", true);
+        }
+
+        private void NumericCountAtStock_ReadOnlyChanged(object arg1, EventArgs arg2)
+        {
+            buttonAddStock.Visible = numericCountAtStock.NoReadOnly;
+        }
+
+        RowWithNoteLinkCollection productInPounkt;
+
+        public RowWithNoteLink NowStock
+        {
+            get
+            {
+                int indexSity = comboBoxWithNameSity.SelectedIndex;
+                IndexNameRow sity = sities[indexSity];
+                RowWithNoteLinkCollection stocks = this.stocks.GetRowsFromLink(sity.ID);
+                return stocks[comboBoxWithNameStock.SelectedIndex];
+            }
         }
 
         public RowWithNoteLinkCollection NowPounkts
@@ -94,10 +116,8 @@ namespace OOO_Rythm
             get
             {
                 
-                int indexSity = comboBoxWithNameSity.SelectedIndex;
-                IndexNameRow sity = sities[indexSity];
-                RowWithNoteLinkCollection stocks = this.stocks.GetRowsFromLink(sity.ID);
-                IndexNameRow stock = stocks[comboBoxWithNameStock.SelectedIndex];
+                
+                IndexNameRow stock = NowStock;
                 return pounkts1.GetRowsFromLink(stock.ID);
             }
         }
@@ -144,6 +164,9 @@ namespace OOO_Rythm
             int pounkt = pounkts1[index].ID;
 
             comboBoxWithNamePounkt.Items.Clear();
+
+            numericCountAtStock.Value = 0;
+
             RowWithNoteLinkCollection rows = NowPounkts;
             for (int i = 0; i < rows.Count; i++)
             {
@@ -162,6 +185,21 @@ namespace OOO_Rythm
             }
 
 
+            SetCountEnabled();
+            try
+            {
+                int product = Product.ID;
+                int stock = NowStock.ID;
+                if(productInPounkt.Contains(stock, product))
+                {
+                    RowWithNoteLink row = productInPounkt.GetRowsFromIdAndLink(stock, product)[0];
+                    numericCountAtStock.Value = row.Value;
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
 
         }
 
@@ -228,7 +266,7 @@ namespace OOO_Rythm
             set => product = value;
         }
 
-        public bool Add => Product.ID == 0;
+        public bool Add => Product.ID < 1;
 
         public Role Role
         {
@@ -253,8 +291,9 @@ namespace OOO_Rythm
 
         private void Pattern_Load(object sender, EventArgs e)
         {
-            if(Product.ID == 0)
+            if(Add)
             {
+                panelCount.Visible = false;
                 comboBoxWithNameCategory.SelectedIndex = 0;
                 comboBoxWithNameManufacture.SelectedIndex = 0;
                 comboBoxWithNameSupplier.SelectedIndex = 0;
@@ -317,6 +356,30 @@ namespace OOO_Rythm
             toolStripStatusLabelTime.Text = time;
         }
 
+        private void buttonAddStock_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int product = Product.ID;
+                int stock = NowStock.ID;
+                int count = (int)numericCountAtStock.Value;
+                //productInPounkt.Update(product, stock, count);
+                productInPounkt.Update(stock, product, count);
+
+                MessageBox.Show("Количество товара на складе успешно изменено", "Редактирование товара", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Не удалось изменить количество товара на складе", "Редактирование товара", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonAddShop_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void buttonEdit_Click(object sender, EventArgs e)
         {
             string message2 = Add ? "Добавление" : "Изменение";
@@ -364,9 +427,17 @@ namespace OOO_Rythm
             }
         }
 
+        public void SetCountEnabled()
+        {
+
+            numericCountAtStock.NoReadOnly = comboBoxWithNameStock.Enabled && checkBoxEdit.Checked;
+            
+        }
+
         private void comboBoxWithNameStock_EnabledChanged(object sender, EventArgs e)
         {
             comboBoxWithNamePounkt.Enabled = (sender as Controls.ComboBoxWithName).Enabled;
+            SetCountEnabled();
         }
 
         private void buttonDropProduct_Click(object sender, EventArgs e)
@@ -421,6 +492,9 @@ namespace OOO_Rythm
                 labelTitle.Text = "Редактирование товара";
             }
             buttonEdit.Visible = (sender as CheckBox).Checked;
+
+
+            SetCountEnabled();
         }
 
     }

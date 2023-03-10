@@ -66,6 +66,20 @@ namespace OOO_Rythm
             return new RowWithNoteLinkCollection(FindAll(p => p.LinkColumnValue == linkID));
         }
 
+        public RowWithNoteLinkCollection GetRowsFromID(int id)
+        {
+            return new RowWithNoteLinkCollection(FindAll(p => p.ID == id));
+        }
+
+        public RowWithNoteLinkCollection GetRowsFromIdAndLink(int id, int link)
+        {
+            return GetRowsFromID(id).GetRowsFromLink(link);
+        }
+
+        public bool Contains(int id, int link)
+        {
+            return GetRowsFromIdAndLink(id, link).Count > 0;
+        }
 
         public int IndexOf(int id)
         {
@@ -85,6 +99,46 @@ namespace OOO_Rythm
         public bool Contains(int id)
         {
             return IndexOf(id) >= 0;
+        }
+
+
+        public void Delete(int id, int link)
+        {
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = Table;
+
+            query.Conditions.Add(new TableDataBaseRow());
+
+            query.Conditions[0].Add(new TableDataBaseCell(IDColumn, id));
+            query.Conditions[0].Add(new TableDataBaseCell(LinkColumn, link));
+            query.Delete();
+        }
+
+        public void Insert(int id, int link, object name)
+        {
+            DataBaseQuery query = new DataBaseQuery(DatabaseConnectionRythm.SettingsConnection());
+            query.Table = Table;
+
+            query.InputValues.Add(new TableDataBaseCell(IDColumn, id));
+            query.InputValues.Add(new TableDataBaseCell(NameColumn, name));
+            query.InputValues.Add(new TableDataBaseCell(LinkColumn, link));
+            query.Insert();
+
+            FromDB();
+        }
+
+        public void Update(int id, int link, object name)
+        {
+            try
+            {
+                Delete(id, link);
+            }
+            catch(Exception ex)
+            {
+
+            }
+
+            Insert(id, link, name);
         }
 
         public void FromDB()

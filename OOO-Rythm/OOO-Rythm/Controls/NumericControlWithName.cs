@@ -17,13 +17,16 @@ namespace OOO_Rythm.Controls
             InitializeComponent();
         }
 
-        public event Action<object, EventArgs> ValueChanged;
+        public event Action<object, EventArgs> ValueChanged, ReadOnlyChanged;
+
+
 
         private void NumericControlWithName_Load(object sender, EventArgs e)
         {
 
             width = tableLayoutPanelPole.ColumnStyles[1].Width;
             textBoxInput.ValueChanged += (s, ea) => ValueChanged?.Invoke(s, ea);
+            textBoxInput.EnabledChanged += (s, ea) => ReadOnlyChanged?.Invoke(s, ea);
         }
 
         float width;
