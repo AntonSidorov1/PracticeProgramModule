@@ -76,7 +76,13 @@ namespace OOO_Rythm
             set => NameColumn.TextValue = value;
         }
 
+        public int Value
+        {
+            get => NameColumn.Int32Value;
+            set => NameColumn.Int32Value = value;
+        }
 
-        
+
+
     }
 }

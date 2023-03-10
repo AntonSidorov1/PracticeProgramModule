@@ -31,6 +31,19 @@ namespace OOO_Rythm
             }
         }
 
+        public int IndexOf(int id) => FindIndex(p => p.ID == id);
+        public bool Contains(int id) => IndexOf(id) >= 0;
+
+        public IndexNameRow GetRowFromID(int id)
+        {
+            return this[GetIndexFromID(id)];
+        }
+
+        public string GetNameFromID(int id)
+        {
+            return GetRowFromID(id).Name;
+        }
+
         string idColumn = "";
         public string IDColumn
         {
@@ -68,7 +81,14 @@ namespace OOO_Rythm
                     TableDataBaseRow row1 = table[i];
                     IndexNameRow row = new IndexNameRow(row1[0].Name, row1[1].Name);
                     row.ID = row1[0].Int32Value;
-                    row.Name = row1[1].TextValue;
+                    try
+                    {
+                        row.Name = row1[1].TextValue;
+                    }
+                    catch
+                    {
+                        row.Value = row1[1].Int32Value;
+                    }
                     Add(row);
                 }
             }

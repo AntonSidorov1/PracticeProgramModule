@@ -69,10 +69,10 @@ namespace OOO_Rythm
             this.textBoxOrganizationName = new System.Windows.Forms.TextBox();
             this.buttonConnectionString = new System.Windows.Forms.Button();
             this.pictureBoxOrganizationLogotip = new System.Windows.Forms.PictureBox();
-            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
-            this.checkBoxSave = new System.Windows.Forms.CheckBox();
             this.textBoxLogin = new OOO_Rythm.TextInput();
             this.textBoxPassword = new OOO_Rythm.TextInput();
+            this.checkBoxShowPassword = new System.Windows.Forms.CheckBox();
+            this.checkBoxSave = new System.Windows.Forms.CheckBox();
             this.contextMenuStripForm.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -485,6 +485,54 @@ namespace OOO_Rythm
             this.pictureBoxOrganizationLogotip.TabIndex = 7;
             this.pictureBoxOrganizationLogotip.TabStop = false;
             // 
+            // textBoxLogin
+            // 
+            this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textBoxLogin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxLogin.InputBackColor = System.Drawing.SystemColors.Window;
+            this.textBoxLogin.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxLogin.InputText = "";
+            this.textBoxLogin.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxLogin.Location = new System.Drawing.Point(233, 66);
+            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxLogin.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textBoxLogin.MultiLine = false;
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.NoReadOnly = true;
+            this.textBoxLogin.PasswordChar = '\0';
+            this.textBoxLogin.ReadOnly = false;
+            this.textBoxLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBoxLogin.Size = new System.Drawing.Size(221, 71);
+            this.textBoxLogin.TabIndex = 9;
+            this.textBoxLogin.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textBoxLogin.Title = "Логин";
+            this.textBoxLogin.UseSystemPasswordChar = false;
+            this.textBoxLogin.Value = "";
+            // 
+            // textBoxPassword
+            // 
+            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.textBoxPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxPassword.InputBackColor = System.Drawing.SystemColors.Window;
+            this.textBoxPassword.InputForeColor = System.Drawing.SystemColors.WindowText;
+            this.textBoxPassword.InputText = "";
+            this.textBoxPassword.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.textBoxPassword.Location = new System.Drawing.Point(462, 66);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxPassword.MinimumSize = new System.Drawing.Size(124, 53);
+            this.textBoxPassword.MultiLine = false;
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.NoReadOnly = true;
+            this.textBoxPassword.PasswordChar = '●';
+            this.textBoxPassword.ReadOnly = false;
+            this.textBoxPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.textBoxPassword.Size = new System.Drawing.Size(221, 71);
+            this.textBoxPassword.TabIndex = 10;
+            this.textBoxPassword.TextScrollBar = System.Windows.Forms.ScrollBars.None;
+            this.textBoxPassword.Title = "Пароль";
+            this.textBoxPassword.UseSystemPasswordChar = true;
+            this.textBoxPassword.Value = "";
+            // 
             // checkBoxShowPassword
             // 
             this.checkBoxShowPassword.AutoSize = true;
@@ -509,46 +557,6 @@ namespace OOO_Rythm
             this.checkBoxSave.Text = "Запомнить учётные данные";
             this.checkBoxSave.UseVisualStyleBackColor = true;
             this.checkBoxSave.CheckedChanged += new System.EventHandler(this.checkBoxSave_CheckedChanged_1);
-            // 
-            // textBoxLogin
-            // 
-            this.textBoxLogin.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textBoxLogin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxLogin.InputText = "";
-            this.textBoxLogin.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxLogin.Location = new System.Drawing.Point(233, 66);
-            this.textBoxLogin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxLogin.MinimumSize = new System.Drawing.Size(124, 53);
-            this.textBoxLogin.MultiLine = false;
-            this.textBoxLogin.Name = "textBoxLogin";
-            this.textBoxLogin.PasswordChar = '\0';
-            this.textBoxLogin.ReadOnly = false;
-            this.textBoxLogin.Size = new System.Drawing.Size(221, 71);
-            this.textBoxLogin.TabIndex = 9;
-            this.textBoxLogin.TextScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.textBoxLogin.Title = "Логин";
-            this.textBoxLogin.UseSystemPasswordChar = false;
-            this.textBoxLogin.Value = "";
-            // 
-            // textBoxPassword
-            // 
-            this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.textBoxPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxPassword.InputText = "";
-            this.textBoxPassword.InputTextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.textBoxPassword.Location = new System.Drawing.Point(462, 66);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBoxPassword.MinimumSize = new System.Drawing.Size(124, 53);
-            this.textBoxPassword.MultiLine = false;
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '●';
-            this.textBoxPassword.ReadOnly = false;
-            this.textBoxPassword.Size = new System.Drawing.Size(221, 71);
-            this.textBoxPassword.TabIndex = 10;
-            this.textBoxPassword.TextScrollBar = System.Windows.Forms.ScrollBars.None;
-            this.textBoxPassword.Title = "Пароль";
-            this.textBoxPassword.UseSystemPasswordChar = true;
-            this.textBoxPassword.Value = "";
             // 
             // Autorization
             // 

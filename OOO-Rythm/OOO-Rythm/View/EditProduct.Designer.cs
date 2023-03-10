@@ -38,6 +38,9 @@ namespace OOO_Rythm
             this.labelTitle = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
             this.panelVault = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonEdit = new System.Windows.Forms.Button();
+            this.buttonDropProduct = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelTime = new System.Windows.Forms.ToolStripStatusLabel();
@@ -52,8 +55,10 @@ namespace OOO_Rythm
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.labelCost = new System.Windows.Forms.Label();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.panelCount = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.labelShop = new System.Windows.Forms.Label();
+            this.labelPounkt = new System.Windows.Forms.Label();
             this.textInputArticul = new OOO_Rythm.TextInput();
             this.textInputName = new OOO_Rythm.TextInput();
             this.comboBoxWithNameManufacture = new OOO_Rythm.Controls.ComboBoxWithName();
@@ -62,11 +67,14 @@ namespace OOO_Rythm
             this.textInputDescription = new OOO_Rythm.TextInput();
             this.numericControlWithNameCost = new OOO_Rythm.Controls.NumericControlWithName();
             this.numericControlWithNameDiscount = new OOO_Rythm.Controls.NumericControlWithName();
-            this.buttonDropProduct = new System.Windows.Forms.Button();
+            this.comboBoxWithNameSity = new OOO_Rythm.Controls.ComboBoxWithName();
+            this.comboBoxWithNameStock = new OOO_Rythm.Controls.ComboBoxWithName();
+            this.comboBoxWithNamePounkt = new OOO_Rythm.Controls.ComboBoxWithName();
             this.panelTitle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).BeginInit();
             this.panelVault.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,7 +84,8 @@ namespace OOO_Rythm
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
+            this.panelCount.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // notifyIconApp
@@ -166,6 +175,47 @@ namespace OOO_Rythm
             this.panelVault.Size = new System.Drawing.Size(1099, 79);
             this.panelVault.TabIndex = 1;
             // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel7.Controls.Add(this.buttonEdit, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.buttonDropProduct, 2, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(1099, 56);
+            this.tableLayoutPanel7.TabIndex = 1;
+            // 
+            // buttonEdit
+            // 
+            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonEdit.Location = new System.Drawing.Point(277, 3);
+            this.buttonEdit.Name = "buttonEdit";
+            this.buttonEdit.Size = new System.Drawing.Size(268, 50);
+            this.buttonEdit.TabIndex = 0;
+            this.buttonEdit.Text = "Редактировать";
+            this.buttonEdit.UseVisualStyleBackColor = true;
+            this.buttonEdit.VisibleChanged += new System.EventHandler(this.buttonEdit_VisibleChanged);
+            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            // 
+            // buttonDropProduct
+            // 
+            this.buttonDropProduct.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonDropProduct.Location = new System.Drawing.Point(551, 3);
+            this.buttonDropProduct.Name = "buttonDropProduct";
+            this.buttonDropProduct.Size = new System.Drawing.Size(268, 50);
+            this.buttonDropProduct.TabIndex = 1;
+            this.buttonDropProduct.Text = "Удалить товар";
+            this.buttonDropProduct.UseVisualStyleBackColor = true;
+            this.buttonDropProduct.Click += new System.EventHandler(this.buttonDropProduct_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Font = new System.Drawing.Font("Lucida Console", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -206,6 +256,7 @@ namespace OOO_Rythm
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel2.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panelCount, 1, 2);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 90);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -336,42 +387,65 @@ namespace OOO_Rythm
             // 
             this.labelCost.AutoSize = true;
             this.labelCost.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelCost.Location = new System.Drawing.Point(3, 124);
+            this.labelCost.Location = new System.Drawing.Point(3, 126);
             this.labelCost.Name = "labelCost";
-            this.labelCost.Size = new System.Drawing.Size(248, 65);
+            this.labelCost.Size = new System.Drawing.Size(248, 63);
             this.labelCost.TabIndex = 2;
             this.labelCost.Text = "label1";
             this.labelCost.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tableLayoutPanel7
+            // panelCount
             // 
-            this.tableLayoutPanel7.ColumnCount = 4;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Controls.Add(this.buttonEdit, 1, 0);
-            this.tableLayoutPanel7.Controls.Add(this.buttonDropProduct, 2, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 1;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(1099, 56);
-            this.tableLayoutPanel7.TabIndex = 1;
+            this.panelCount.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelCount.Controls.Add(this.tableLayoutPanel8);
+            this.panelCount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCount.Location = new System.Drawing.Point(23, 319);
+            this.panelCount.Name = "panelCount";
+            this.panelCount.Size = new System.Drawing.Size(1053, 120);
+            this.panelCount.TabIndex = 3;
             // 
-            // buttonEdit
+            // tableLayoutPanel8
             // 
-            this.buttonEdit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonEdit.Location = new System.Drawing.Point(277, 3);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(268, 50);
-            this.buttonEdit.TabIndex = 0;
-            this.buttonEdit.Text = "Редактировать";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.VisibleChanged += new System.EventHandler(this.buttonEdit_VisibleChanged);
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.tableLayoutPanel8.ColumnCount = 4;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel8.Controls.Add(this.comboBoxWithNameSity, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.comboBoxWithNameStock, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.comboBoxWithNamePounkt, 2, 0);
+            this.tableLayoutPanel8.Controls.Add(this.labelShop, 3, 0);
+            this.tableLayoutPanel8.Controls.Add(this.labelPounkt, 3, 1);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 2;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(1049, 116);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // labelShop
+            // 
+            this.labelShop.AutoSize = true;
+            this.labelShop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelShop.Location = new System.Drawing.Point(789, 0);
+            this.labelShop.Name = "labelShop";
+            this.labelShop.Size = new System.Drawing.Size(257, 58);
+            this.labelShop.TabIndex = 3;
+            this.labelShop.Text = ".";
+            this.labelShop.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelPounkt
+            // 
+            this.labelPounkt.AutoSize = true;
+            this.labelPounkt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelPounkt.Location = new System.Drawing.Point(789, 58);
+            this.labelPounkt.Name = "labelPounkt";
+            this.labelPounkt.Size = new System.Drawing.Size(257, 58);
+            this.labelPounkt.TabIndex = 4;
+            this.labelPounkt.Text = ".";
+            this.labelPounkt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // textInputArticul
             // 
@@ -517,7 +591,7 @@ namespace OOO_Rythm
             this.numericControlWithNameCost.Name = "numericControlWithNameCost";
             this.numericControlWithNameCost.NoReadOnly = false;
             this.numericControlWithNameCost.ReadOnly = true;
-            this.numericControlWithNameCost.Size = new System.Drawing.Size(246, 56);
+            this.numericControlWithNameCost.Size = new System.Drawing.Size(246, 57);
             this.numericControlWithNameCost.TabIndex = 0;
             this.numericControlWithNameCost.Title = "Цена без скидки";
             this.numericControlWithNameCost.Value = new decimal(new int[] {
@@ -538,7 +612,7 @@ namespace OOO_Rythm
             0});
             this.numericControlWithNameDiscount.InputBackColor = System.Drawing.SystemColors.Window;
             this.numericControlWithNameDiscount.InputForeColor = System.Drawing.SystemColors.WindowText;
-            this.numericControlWithNameDiscount.Location = new System.Drawing.Point(4, 65);
+            this.numericControlWithNameDiscount.Location = new System.Drawing.Point(4, 66);
             this.numericControlWithNameDiscount.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numericControlWithNameDiscount.Maximum = new decimal(new int[] {
             100,
@@ -553,7 +627,7 @@ namespace OOO_Rythm
             this.numericControlWithNameDiscount.Name = "numericControlWithNameDiscount";
             this.numericControlWithNameDiscount.NoReadOnly = false;
             this.numericControlWithNameDiscount.ReadOnly = true;
-            this.numericControlWithNameDiscount.Size = new System.Drawing.Size(246, 56);
+            this.numericControlWithNameDiscount.Size = new System.Drawing.Size(246, 57);
             this.numericControlWithNameDiscount.TabIndex = 1;
             this.numericControlWithNameDiscount.Title = "Скидка";
             this.numericControlWithNameDiscount.Value = new decimal(new int[] {
@@ -562,16 +636,52 @@ namespace OOO_Rythm
             0,
             0});
             // 
-            // buttonDropProduct
+            // comboBoxWithNameSity
             // 
-            this.buttonDropProduct.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonDropProduct.Location = new System.Drawing.Point(551, 3);
-            this.buttonDropProduct.Name = "buttonDropProduct";
-            this.buttonDropProduct.Size = new System.Drawing.Size(268, 50);
-            this.buttonDropProduct.TabIndex = 1;
-            this.buttonDropProduct.Text = "Удалить товар";
-            this.buttonDropProduct.UseVisualStyleBackColor = true;
-            this.buttonDropProduct.Click += new System.EventHandler(this.buttonDropProduct_Click);
+            this.comboBoxWithNameSity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameSity.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameSity.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameSity.Location = new System.Drawing.Point(4, 3);
+            this.comboBoxWithNameSity.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNameSity.Name = "comboBoxWithNameSity";
+            this.comboBoxWithNameSity.NoReadOnly = true;
+            this.comboBoxWithNameSity.ReadOnly = false;
+            this.comboBoxWithNameSity.SelectedIndex = -1;
+            this.comboBoxWithNameSity.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNameSity.TabIndex = 0;
+            this.comboBoxWithNameSity.Title = "Город";
+            // 
+            // comboBoxWithNameStock
+            // 
+            this.comboBoxWithNameStock.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNameStock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNameStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNameStock.Location = new System.Drawing.Point(266, 3);
+            this.comboBoxWithNameStock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNameStock.Name = "comboBoxWithNameStock";
+            this.comboBoxWithNameStock.NoReadOnly = true;
+            this.comboBoxWithNameStock.ReadOnly = false;
+            this.comboBoxWithNameStock.SelectedIndex = -1;
+            this.comboBoxWithNameStock.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNameStock.TabIndex = 1;
+            this.comboBoxWithNameStock.Title = "Склад";
+            this.comboBoxWithNameStock.EnabledChanged += new System.EventHandler(this.comboBoxWithNameStock_EnabledChanged);
+            // 
+            // comboBoxWithNamePounkt
+            // 
+            this.comboBoxWithNamePounkt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.comboBoxWithNamePounkt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBoxWithNamePounkt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxWithNamePounkt.Location = new System.Drawing.Point(528, 3);
+            this.comboBoxWithNamePounkt.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.comboBoxWithNamePounkt.Name = "comboBoxWithNamePounkt";
+            this.comboBoxWithNamePounkt.NoReadOnly = true;
+            this.comboBoxWithNamePounkt.ReadOnly = false;
+            this.comboBoxWithNamePounkt.SelectedIndex = -1;
+            this.comboBoxWithNamePounkt.Size = new System.Drawing.Size(254, 52);
+            this.comboBoxWithNamePounkt.TabIndex = 2;
+            this.comboBoxWithNamePounkt.Title = "Пункты";
+            this.comboBoxWithNamePounkt.EnabledChanged += new System.EventHandler(this.comboBoxWithNamePounkt_EnabledChanged);
             // 
             // EditProduct
             // 
@@ -594,6 +704,7 @@ namespace OOO_Rythm
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogotip)).EndInit();
             this.panelVault.ResumeLayout(false);
             this.panelVault.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -606,7 +717,9 @@ namespace OOO_Rythm
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
+            this.panelCount.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.tableLayoutPanel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -645,6 +758,13 @@ namespace OOO_Rythm
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonDropProduct;
+        private System.Windows.Forms.Panel panelCount;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private Controls.ComboBoxWithName comboBoxWithNameSity;
+        private Controls.ComboBoxWithName comboBoxWithNameStock;
+        private Controls.ComboBoxWithName comboBoxWithNamePounkt;
+        private System.Windows.Forms.Label labelShop;
+        private System.Windows.Forms.Label labelPounkt;
     }
 }
 

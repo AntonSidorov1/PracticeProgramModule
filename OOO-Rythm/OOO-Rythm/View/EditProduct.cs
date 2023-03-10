@@ -49,10 +49,148 @@ namespace OOO_Rythm
                 comboBoxWithNameSupplier.Items.Add(supplier[i].Name);
             }
 
+            sities = new IndexNameRowsCollection("Sity", "SityID", "SityName", true);
+            for (int i = 0; i < sities.Count; i++)
+            {
+                comboBoxWithNameSity.Items.Add(sities[i].Name);
+            }
+            comboBoxWithNameSity.SelectedIndexChanged += ComboBoxWithNameSity_SelectedIndexChanged;
+            comboBoxWithNameStock.SelectedIndexChanged += ComboBoxWithNameStock_SelectedIndexChanged;
+            comboBoxWithNamePounkt.SelectedIndexChanged += ComboBoxWithNamePounkt_SelectedIndexChanged;
+
+            organizations = new IndexNameRowsCollection("Organization", "OrganizationID", "OrganizationName", true);
+
+            stocks = new RowWithNoteLinkCollection("Stock", "StockID", "StockAddress", "StockSityID", true);
+
+            pounkts1 = new RowWithNoteLinkCollection("Pounkt", "PounktID", "PounktAddress", "PounktStockID", true);
+            pounkts2 = new RowWithNoteLinkCollection("Pounkt", "PounktID", "PounktAddress", "PounktOrganizationID", true);
+
+            RowWithNoteLinkCollection pounkts = new RowWithNoteLinkCollection();
+            
+            pounkts2 = pounkts2.GetRowsFromLink(ourOrganization.ID);
+            for (int i = 0; i < pounkts2.Count; i++) 
+            {
+                RowWithNoteLink pounkt = pounkts1.GetRowFromID(pounkts2[i].ID);
+                pounkts.Add(pounkt);
+            }
+            pounkts1 = pounkts;
+
+            shops = new IndexNameRowsCollection("Shop", "PounktID", "ShopName", true);
+            pounktsOfIssue = new IndexNameRowsCollection("PounktOfIssue", "PounktID", "PounktOfIssoueName", true);
+
+
+            //for (int i = 0; i < supplier.Count; i++)
+            //{
+            //    comboBoxWithNameSity.Items.Add(supplier[i].Name);
+            //}
+
+
             numericControlWithNameCost.ValueChanged += NumericControlWithNameCost_ValueChanged;
             numericControlWithNameDiscount.ValueChanged += NumericControlWithNameCost_ValueChanged;
         }
 
+        public RowWithNoteLinkCollection NowPounkts
+        {
+            get
+            {
+                
+                int indexSity = comboBoxWithNameSity.SelectedIndex;
+                IndexNameRow sity = sities[indexSity];
+                RowWithNoteLinkCollection stocks = this.stocks.GetRowsFromLink(sity.ID);
+                IndexNameRow stock = stocks[comboBoxWithNameStock.SelectedIndex];
+                return pounkts1.GetRowsFromLink(stock.ID);
+            }
+        }
+
+        private void ComboBoxWithNamePounkt_SelectedIndexChanged(object arg1, EventArgs arg2)
+        {
+            try
+            {
+                int index = (arg1 as ComboBox).SelectedIndex;
+                
+                RowWithNoteLinkCollection pounkts = NowPounkts;
+                int pounkt = pounkts[index].ID;
+
+                if (shops.Contains(pounkt))
+                {
+                    labelShop.Text = "Магазин: " + shops.GetNameFromID(pounkt);
+                }
+                else
+                {
+                    labelShop.Text = "Магазин отсутствует";
+                }
+
+
+                if (pounktsOfIssue.Contains(pounkt))
+                {
+                    labelPounkt.Text = "Пункт выдачи: " + pounktsOfIssue.GetNameFromID(pounkt);
+                }
+                else
+                {
+                    labelPounkt.Text = "Пункт выдачи отсутствует";
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void ComboBoxWithNameStock_SelectedIndexChanged(object arg1, EventArgs arg2)
+        {
+            int index = (arg1 as ComboBox).SelectedIndex;
+            comboBoxWithNamePounkt.Items.Clear();
+
+            int pounkt = pounkts1[index].ID;
+
+            comboBoxWithNamePounkt.Items.Clear();
+            RowWithNoteLinkCollection rows = NowPounkts;
+            for (int i = 0; i < rows.Count; i++)
+            {
+                if (pounkts2.Contains(rows[i].ID))
+                    comboBoxWithNamePounkt.Items.Add(rows[i].Name);
+            }
+
+            if (comboBoxWithNamePounkt.Items.Count > 0)
+            {
+                comboBoxWithNamePounkt.Enabled = true;
+                comboBoxWithNamePounkt.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxWithNamePounkt.Enabled = false;
+            }
+
+
+
+        }
+
+        private void ComboBoxWithNameSity_SelectedIndexChanged(object arg1, EventArgs arg2)
+        {
+            int index = (arg1 as ComboBox).SelectedIndex;
+            int sity = sities[index].ID;
+            comboBoxWithNameStock.Items.Clear();
+            comboBoxWithNamePounkt.Items.Clear();
+            RowWithNoteLinkCollection rows = stocks.GetRowsFromLink(sity);
+            for(int i =0; i < rows.Count; i++)
+            {
+                comboBoxWithNameStock.Items.Add(rows[i].Name);
+            }
+
+            if (rows.Count > 0)
+            {
+                comboBoxWithNameStock.Enabled = true;
+                comboBoxWithNameStock.SelectedIndex = 0;
+            }
+            else
+            {
+                comboBoxWithNameStock.Enabled = false;
+            }
+        }
+
+        RowWithNoteLinkCollection stocks, pounkts1, pounkts2;
+        IndexNameRowsCollection shops, pounktsOfIssue;
+        
         private void NumericControlWithNameCost_ValueChanged(object arg1, EventArgs arg2)
         {
             labelCost.Text = "Цена со скидкой = ";
@@ -109,7 +247,9 @@ namespace OOO_Rythm
             numericControlWithNameDiscount.ReadOnly = readOnly;
         }
 
-        IndexNameRowsCollection categories, manufacture, supplier;
+        IndexNameRowsCollection categories, manufacture, supplier, sities, organizations;
+
+        IndexNameRow ourOrganization => organizations.Find(p => p.Name == "ООО \"Ритм\"");
 
         private void Pattern_Load(object sender, EventArgs e)
         {
@@ -118,12 +258,14 @@ namespace OOO_Rythm
                 comboBoxWithNameCategory.SelectedIndex = 0;
                 comboBoxWithNameManufacture.SelectedIndex = 0;
                 comboBoxWithNameSupplier.SelectedIndex = 0;
+                panelCount.Visible = false;
             }
             else
             {
                 comboBoxWithNameCategory.SelectedIndex = categories.GetIndexFromID(Product.CategoryID);
                 comboBoxWithNameManufacture.SelectedIndex = manufacture.GetIndexFromID(Product.ManufactureID);
                 comboBoxWithNameSupplier.SelectedIndex = supplier.GetIndexFromID(Product.SupplierID);
+                comboBoxWithNameSity.SelectedIndex = 0;
             }
 
             textInputArticul.SetReadOnlyOrNoReadOnly();
@@ -158,6 +300,12 @@ namespace OOO_Rythm
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void comboBoxWithNamePounkt_EnabledChanged(object sender, EventArgs e)
+        {
+            labelShop.Visible = (sender as Controls.ComboBoxWithName).Enabled; 
+            labelPounkt.Visible = (sender as Controls.ComboBoxWithName).Enabled;
         }
 
         private void timerDateTime_Tick(object sender, EventArgs e)
@@ -214,6 +362,11 @@ namespace OOO_Rythm
                 string message1 = Add ? "добавить" : "изменить";
                 MessageBox.Show($"Не удалось {message1} товар", $"{message2} товара", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void comboBoxWithNameStock_EnabledChanged(object sender, EventArgs e)
+        {
+            comboBoxWithNamePounkt.Enabled = (sender as Controls.ComboBoxWithName).Enabled;
         }
 
         private void buttonDropProduct_Click(object sender, EventArgs e)

@@ -67,9 +67,11 @@
     <Compile Include="Classes\Helper.cs" />
     <Compile Include="Classes\IndexNameRow.cs" />
     <Compile Include="Classes\IndexNameRowsCollection.cs" />
+    <Compile Include="Classes\RowWithNoteLinkCollection.cs" />
     <Compile Include="Classes\Product.cs" />
     <Compile Include="Classes\ProductCategory.cs" />
     <Compile Include="Classes\ProductsCollection.cs" />
+    <Compile Include="Classes\RowWithNoteLink.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Classes\UsersCollection.cs" />
     <Compile Include="Controls\ComboBoxWithName.cs">

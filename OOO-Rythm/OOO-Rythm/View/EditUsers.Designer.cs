@@ -253,6 +253,7 @@ namespace OOO_Rythm
             this.textInputLogin.NoReadOnly = true;
             this.textInputLogin.PasswordChar = '\0';
             this.textInputLogin.ReadOnly = false;
+            this.textInputLogin.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.textInputLogin.Size = new System.Drawing.Size(353, 54);
             this.textInputLogin.TabIndex = 0;
             this.textInputLogin.TextScrollBar = System.Windows.Forms.ScrollBars.None;
